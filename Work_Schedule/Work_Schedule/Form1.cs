@@ -12,9 +12,17 @@ namespace Work_Schedule
 {
     public partial class MainForm : Form
     {
+        private bool Dragging = false;
+        private Point Offset;
+        private Point StartPoint = new Point(0, 0);
         public MainForm()
         {
             InitializeComponent();
+            
+        }
+        private void QuationMark_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("在此處新增使用說明");
         }
 
         private void SettingButton_Click(object sender, EventArgs e)
@@ -55,9 +63,30 @@ namespace Work_Schedule
             Application.Exit();
         }
 
-        private void QuationMark_Click(object sender, EventArgs e)
+        private void MinimumButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("在此處新增使用說明");
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        // 拖曳視窗
+        private void TitlePanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            Dragging = true;
+            StartPoint = new Point(e.X, e.Y);
+        }
+
+        private void TitlePanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(e.X - this.StartPoint.X, e.Y - this.StartPoint.Y);
+            }
+        }
+
+        private void TitlePanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            Dragging = false;
         }
     }
 }

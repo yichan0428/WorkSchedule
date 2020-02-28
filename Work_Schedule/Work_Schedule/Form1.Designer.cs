@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.MadeTime = new System.Windows.Forms.Label();
+            this.Title = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.QuationMark = new System.Windows.Forms.Button();
             this.SalaryButton = new System.Windows.Forms.Button();
@@ -37,29 +40,26 @@
             this.ScheduleButton = new System.Windows.Forms.Button();
             this.SettingButton = new System.Windows.Forms.Button();
             this.DesktopPanel = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Title = new System.Windows.Forms.Label();
-            this.TitlePanel = new System.Windows.Forms.Panel();
-            this.MadeTime = new System.Windows.Forms.Label();
-            this.SubTitle = new System.Windows.Forms.Label();
             this.home1 = new Work_Schedule.Controls.Home();
             this.scheduleControl1 = new Work_Schedule.ScheduleControl();
             this.settingControl1 = new Work_Schedule.SettingControl();
             this.salaryControl1 = new Work_Schedule.SalaryControl();
             this.timeControl1 = new Work_Schedule.TimeControl();
+            this.MinimumButton = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.TitlePanel = new System.Windows.Forms.Panel();
+            this.SubTitle = new System.Windows.Forms.Label();
             this.MenuPanel.SuspendLayout();
-            this.DesktopPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.DesktopPanel.SuspendLayout();
             this.TitlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuPanel
             // 
+            this.MenuPanel.Controls.Add(this.MadeTime);
+            this.MenuPanel.Controls.Add(this.Title);
+            this.MenuPanel.Controls.Add(this.pictureBox1);
             this.MenuPanel.Controls.Add(this.SidePanel);
             this.MenuPanel.Controls.Add(this.QuationMark);
             this.MenuPanel.Controls.Add(this.SalaryButton);
@@ -69,8 +69,40 @@
             this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(150, 933);
+            this.MenuPanel.Size = new System.Drawing.Size(150, 851);
             this.MenuPanel.TabIndex = 0;
+            // 
+            // MadeTime
+            // 
+            this.MadeTime.AutoSize = true;
+            this.MadeTime.Font = new System.Drawing.Font("DFKai-SB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.MadeTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.MadeTime.Location = new System.Drawing.Point(80, 141);
+            this.MadeTime.Name = "MadeTime";
+            this.MadeTime.Size = new System.Drawing.Size(70, 13);
+            this.MadeTime.TabIndex = 3;
+            this.MadeTime.Text = "ver.1.1.1";
+            // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("DFKai-SB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.Title.Location = new System.Drawing.Point(18, 104);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(106, 24);
+            this.Title.TabIndex = 0;
+            this.Title.Text = "排班系統";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(24, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // SidePanel
             // 
@@ -195,132 +227,14 @@
             this.DesktopPanel.Controls.Add(this.salaryControl1);
             this.DesktopPanel.Controls.Add(this.timeControl1);
             this.DesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DesktopPanel.Location = new System.Drawing.Point(150, 120);
+            this.DesktopPanel.Location = new System.Drawing.Point(150, 101);
             this.DesktopPanel.Name = "DesktopPanel";
-            this.DesktopPanel.Size = new System.Drawing.Size(1005, 813);
+            this.DesktopPanel.Size = new System.Drawing.Size(1005, 750);
             this.DesktopPanel.TabIndex = 2;
-            // 
-            // button4
-            // 
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(929, 36);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(28, 28);
-            this.button4.TabIndex = 0;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(963, 36);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(28, 28);
-            this.button5.TabIndex = 0;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(117)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1005, 20);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(117)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.Title);
-            this.panel2.Location = new System.Drawing.Point(55, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(140, 120);
-            this.panel2.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("DFKai-SB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.Title.Location = new System.Drawing.Point(19, 91);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(106, 24);
-            this.Title.TabIndex = 0;
-            this.Title.Text = "排班系統";
-            // 
-            // TitlePanel
-            // 
-            this.TitlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.TitlePanel.Controls.Add(this.MadeTime);
-            this.TitlePanel.Controls.Add(this.SubTitle);
-            this.TitlePanel.Controls.Add(this.panel2);
-            this.TitlePanel.Controls.Add(this.panel1);
-            this.TitlePanel.Controls.Add(this.button5);
-            this.TitlePanel.Controls.Add(this.button4);
-            this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TitlePanel.Location = new System.Drawing.Point(150, 0);
-            this.TitlePanel.Name = "TitlePanel";
-            this.TitlePanel.Size = new System.Drawing.Size(1005, 120);
-            this.TitlePanel.TabIndex = 1;
-            // 
-            // MadeTime
-            // 
-            this.MadeTime.AutoSize = true;
-            this.MadeTime.Font = new System.Drawing.Font("DFKai-SB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.MadeTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.MadeTime.Location = new System.Drawing.Point(204, 99);
-            this.MadeTime.Name = "MadeTime";
-            this.MadeTime.Size = new System.Drawing.Size(70, 13);
-            this.MadeTime.TabIndex = 3;
-            this.MadeTime.Text = "ver.1.1.1";
-            // 
-            // SubTitle
-            // 
-            this.SubTitle.AutoSize = true;
-            this.SubTitle.Font = new System.Drawing.Font("DFKai-SB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.SubTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(117)))));
-            this.SubTitle.Location = new System.Drawing.Point(441, 57);
-            this.SubTitle.Name = "SubTitle";
-            this.SubTitle.Size = new System.Drawing.Size(31, 32);
-            this.SubTitle.TabIndex = 0;
-            this.SubTitle.Text = " ";
-            this.SubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // home1
             // 
+            this.home1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.home1.Location = new System.Drawing.Point(0, 0);
             this.home1.Name = "home1";
             this.home1.Size = new System.Drawing.Size(1005, 814);
@@ -354,12 +268,81 @@
             this.timeControl1.Size = new System.Drawing.Size(1005, 814);
             this.timeControl1.TabIndex = 0;
             // 
+            // MinimumButton
+            // 
+            this.MinimumButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.MinimumButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.MinimumButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MinimumButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.MinimumButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.MinimumButton.FlatAppearance.BorderSize = 0;
+            this.MinimumButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimumButton.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.MinimumButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MinimumButton.Image = ((System.Drawing.Image)(resources.GetObject("MinimumButton.Image")));
+            this.MinimumButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MinimumButton.Location = new System.Drawing.Point(930, 23);
+            this.MinimumButton.Name = "MinimumButton";
+            this.MinimumButton.Size = new System.Drawing.Size(28, 28);
+            this.MinimumButton.TabIndex = 0;
+            this.MinimumButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.MinimumButton.UseVisualStyleBackColor = false;
+            this.MinimumButton.Click += new System.EventHandler(this.MinimumButton_Click);
+            // 
+            // button5
+            // 
+            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(963, 26);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(28, 28);
+            this.button5.TabIndex = 0;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // TitlePanel
+            // 
+            this.TitlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.TitlePanel.Controls.Add(this.SubTitle);
+            this.TitlePanel.Controls.Add(this.button5);
+            this.TitlePanel.Controls.Add(this.MinimumButton);
+            this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TitlePanel.Location = new System.Drawing.Point(150, 0);
+            this.TitlePanel.Name = "TitlePanel";
+            this.TitlePanel.Size = new System.Drawing.Size(1005, 101);
+            this.TitlePanel.TabIndex = 1;
+            this.TitlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseDown);
+            this.TitlePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseMove);
+            this.TitlePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseUp);
+            // 
+            // SubTitle
+            // 
+            this.SubTitle.AutoSize = true;
+            this.SubTitle.Font = new System.Drawing.Font("DFKai-SB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SubTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(117)))));
+            this.SubTitle.Location = new System.Drawing.Point(414, 36);
+            this.SubTitle.Name = "SubTitle";
+            this.SubTitle.Size = new System.Drawing.Size(31, 32);
+            this.SubTitle.TabIndex = 0;
+            this.SubTitle.Text = " ";
+            this.SubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(1155, 933);
+            this.ClientSize = new System.Drawing.Size(1155, 851);
             this.Controls.Add(this.DesktopPanel);
             this.Controls.Add(this.TitlePanel);
             this.Controls.Add(this.MenuPanel);
@@ -369,10 +352,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.MenuPanel.ResumeLayout(false);
-            this.DesktopPanel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.MenuPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.DesktopPanel.ResumeLayout(false);
             this.TitlePanel.ResumeLayout(false);
             this.TitlePanel.PerformLayout();
             this.ResumeLayout(false);
@@ -389,10 +371,8 @@
         private System.Windows.Forms.Button ScheduleButton;
         private System.Windows.Forms.Button QuationMark;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button MinimumButton;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Panel TitlePanel;
@@ -400,9 +380,9 @@
         private SalaryControl salaryControl1;
         private ScheduleControl scheduleControl1;
         private SettingControl settingControl1;
-        private Controls.Home home1;
         private System.Windows.Forms.Label MadeTime;
         private System.Windows.Forms.Label SubTitle;
+        private Controls.Home home1;
     }
 }
 
