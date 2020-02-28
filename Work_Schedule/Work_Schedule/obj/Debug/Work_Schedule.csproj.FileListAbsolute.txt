@@ -1,0 +1,15 @@
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\bin\Debug\Work_Schedule.exe.config
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\bin\Debug\Work_Schedule.exe
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\bin\Debug\Work_Schedule.pdb
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.csprojResolveAssemblyReference.cache
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.MainForm.resources
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.Properties.Resources.resources
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.csproj.GenerateResource.Cache
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.exe
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.pdb
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.TimeControl.resources
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.SalaryControl.resources
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.ScheduleControl.resources
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.SettingControl.resources
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.Controls.Home.resources
+C:\Users\chan\Documents\Visual Studio 2015\Projects\Work_Schedule\Work_Schedule\bin\Debug\Bunifu_UI_v1.5.3.dll
