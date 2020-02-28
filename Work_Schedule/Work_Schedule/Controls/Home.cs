@@ -16,5 +16,9 @@ namespace Work_Schedule.Controls
         {
             InitializeComponent();
         }
+
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
     }
 }
