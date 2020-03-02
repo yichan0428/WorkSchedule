@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.QuationMarkButton = new System.Windows.Forms.Button();
             this.MadeTime = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,6 +58,7 @@
             // 
             // MenuPanel
             // 
+            this.MenuPanel.Controls.Add(this.QuationMarkButton);
             this.MenuPanel.Controls.Add(this.MadeTime);
             this.MenuPanel.Controls.Add(this.Title);
             this.MenuPanel.Controls.Add(this.pictureBox1);
@@ -72,10 +74,31 @@
             this.MenuPanel.Size = new System.Drawing.Size(150, 851);
             this.MenuPanel.TabIndex = 0;
             // 
+            // QuationMarkButton
+            // 
+            this.QuationMarkButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.QuationMarkButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.QuationMarkButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.QuationMarkButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.QuationMarkButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.QuationMarkButton.FlatAppearance.BorderSize = 0;
+            this.QuationMarkButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QuationMarkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuationMarkButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.QuationMarkButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.QuationMarkButton.Location = new System.Drawing.Point(12, 811);
+            this.QuationMarkButton.Name = "QuationMarkButton";
+            this.QuationMarkButton.Size = new System.Drawing.Size(28, 28);
+            this.QuationMarkButton.TabIndex = 1;
+            this.QuationMarkButton.Text = "?";
+            this.QuationMarkButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.QuationMarkButton.UseVisualStyleBackColor = false;
+            this.QuationMarkButton.Click += new System.EventHandler(this.QuationMarkButton_Click);
+            // 
             // MadeTime
             // 
             this.MadeTime.AutoSize = true;
-            this.MadeTime.Font = new System.Drawing.Font("DFKai-SB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.MadeTime.Font = new System.Drawing.Font("標楷體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.MadeTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.MadeTime.Location = new System.Drawing.Point(80, 141);
             this.MadeTime.Name = "MadeTime";
@@ -86,7 +109,7 @@
             // Title
             // 
             this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("DFKai-SB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Title.Font = new System.Drawing.Font("標楷體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.Title.Location = new System.Drawing.Point(18, 104);
             this.Title.Name = "Title";
@@ -142,7 +165,7 @@
             this.SalaryButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.SalaryButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.SalaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SalaryButton.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SalaryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.SalaryButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SalaryButton.Image = ((System.Drawing.Image)(resources.GetObject("SalaryButton.Image")));
             this.SalaryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,7 +186,7 @@
             this.TimeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.TimeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.TimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TimeButton.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.TimeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TimeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TimeButton.Image = ((System.Drawing.Image)(resources.GetObject("TimeButton.Image")));
             this.TimeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,7 +207,7 @@
             this.ScheduleButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ScheduleButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ScheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ScheduleButton.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ScheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.ScheduleButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ScheduleButton.Image = ((System.Drawing.Image)(resources.GetObject("ScheduleButton.Image")));
             this.ScheduleButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,7 +228,7 @@
             this.SettingButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.SettingButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.SettingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingButton.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SettingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.SettingButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SettingButton.Image = ((System.Drawing.Image)(resources.GetObject("SettingButton.Image")));
             this.SettingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,7 +300,7 @@
             this.MinimumButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.MinimumButton.FlatAppearance.BorderSize = 0;
             this.MinimumButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimumButton.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.MinimumButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.MinimumButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.MinimumButton.Image = ((System.Drawing.Image)(resources.GetObject("MinimumButton.Image")));
             this.MinimumButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,7 +321,7 @@
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("AR YanKaiB5 Ultra", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,7 +351,7 @@
             // SubTitle
             // 
             this.SubTitle.AutoSize = true;
-            this.SubTitle.Font = new System.Drawing.Font("DFKai-SB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SubTitle.Font = new System.Drawing.Font("標楷體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.SubTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(117)))));
             this.SubTitle.Location = new System.Drawing.Point(414, 36);
             this.SubTitle.Name = "SubTitle";
@@ -383,6 +406,7 @@
         private System.Windows.Forms.Label MadeTime;
         private System.Windows.Forms.Label SubTitle;
         private Controls.Home home1;
+        private System.Windows.Forms.Button QuationMarkButton;
     }
 }
 

@@ -13,7 +13,6 @@ namespace Work_Schedule
     public partial class MainForm : Form
     {
         private bool Dragging = false;
-        private Point Offset;
         private Point StartPoint = new Point(0, 0);
         public MainForm()
         {
@@ -87,6 +86,11 @@ namespace Work_Schedule
         private void TitlePanel_MouseUp(object sender, MouseEventArgs e)
         {
             Dragging = false;
+        }
+
+        private void QuationMarkButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("使用說明：(待新增)");
         }
     }
 }
