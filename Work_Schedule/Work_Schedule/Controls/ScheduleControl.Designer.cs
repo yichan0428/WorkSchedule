@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.day13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.day14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.day15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CheckButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UpSchedule)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,10 +64,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("AR KaiB5 Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.Location = new System.Drawing.Point(5, 516);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 144);
+            this.label2.Size = new System.Drawing.Size(37, 174);
             this.label2.TabIndex = 1287;
             this.label2.Text = "下\r\n半\r\n月\r\n排\r\n班\r\n表";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -74,10 +75,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("AR KaiB5 Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.Location = new System.Drawing.Point(5, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 144);
+            this.label1.Size = new System.Drawing.Size(37, 174);
             this.label1.TabIndex = 1286;
             this.label1.Text = "上\r\n半\r\n月\r\n排\r\n班\r\n表";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,14 +89,14 @@
             this.UpSchedule.AllowUserToDeleteRows = false;
             this.UpSchedule.AllowUserToResizeColumns = false;
             this.UpSchedule.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UpSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UpSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.UpSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UpSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UpName,
@@ -122,6 +123,7 @@
             this.UpSchedule.ShowCellToolTips = false;
             this.UpSchedule.Size = new System.Drawing.Size(966, 328);
             this.UpSchedule.TabIndex = 1289;
+            this.UpSchedule.Rows.Add(12);
             // 
             // UpName
             // 
@@ -225,11 +227,23 @@
             this.day15.Name = "day15";
             this.day15.Width = 55;
             // 
+            // CheckButton
+            // 
+            this.CheckButton.Font = new System.Drawing.Font("標楷體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.CheckButton.Location = new System.Drawing.Point(728, 416);
+            this.CheckButton.Name = "CheckButton";
+            this.CheckButton.Size = new System.Drawing.Size(96, 46);
+            this.CheckButton.TabIndex = 1290;
+            this.CheckButton.Text = "勞健保檢查";
+            this.CheckButton.UseVisualStyleBackColor = true;
+            this.CheckButton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ScheduleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.Controls.Add(this.CheckButton);
             this.Controls.Add(this.UpSchedule);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
@@ -239,7 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.UpSchedule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.UpSchedule.Rows.Add(12);
+
         }
 
         #endregion
@@ -265,5 +279,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn day13;
         private System.Windows.Forms.DataGridViewTextBoxColumn day14;
         private System.Windows.Forms.DataGridViewTextBoxColumn day15;
+        private System.Windows.Forms.Button CheckButton;
     }
 }
