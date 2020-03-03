@@ -36,7 +36,7 @@ namespace Work_Schedule
             CheckRule checkrule = new CheckRule();
             //string str = "" + UpSchedule.Rows[0].Cells[0].Value;
             //MessageBox.Show("" + checkrule.daily8(str));
-            MessageBox.Show(checkrule.daily8(array));
+            MessageBox.Show(checkrule.TotalCheck(array));
         }
     }
 }

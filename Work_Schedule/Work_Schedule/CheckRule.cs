@@ -8,6 +8,19 @@ namespace Work_Schedule
 {
     class CheckRule
     {
+        public CheckRule()
+        {
+            TotalStr = "";
+        }
+        public string TotalCheck(object[,] array)
+        {
+            weekly7(array);
+            daily8(array);
+            if (TotalStr == "")
+                return "均符合勞健保";
+            else
+                return TotalStr;
+        }
         private int CauculateTimes(string str)
         {
             str += "/0/0";  //gurantee value2 is exist
@@ -40,27 +53,35 @@ namespace Work_Schedule
                         
                     }
                 }
-            if (str == "")
-                return "均符合勞健保";
-            else
-                return str;
+            TotalStr += str;
+            return str;
             }
-        public bool weekly7(string[] str)
+        public string weekly7(object[,] array)
         {
-            int count7 = 0;
-            for (int i = 0; i < 15; i++)
+            string str = ""; 
+            for (int i = 0; i < 12; i++)
             {
-                if (CauculateTimes(str[i]) > 0)
+                int count7 = 0;
+                for (int j = 2; j <= 16; j++)
                 {
-                    count7++;
-                    if (count7 == 7)
+                    if (array[i, 0] != null && array[i, j] != null && CauculateTimes(array[i, j].ToString()) > 0)
                     {
-                        return true;
+                        count7++;
+                        if (count7 == 7)
+                        {
+                            string stradd = array[i, 0].ToString() + " 的第 " + (j - 7) + " 天~第 " +(j-1) + " 天已連續上班七天\n";
+                            str += stradd;
+                        }
+
                     }
+                    else
+                        count7 = 0;
                 }
             }
-            
-            return true;
-        } 
+            TotalStr += str;
+            return str;
+        }
+
+        private string TotalStr;
     }
 }
