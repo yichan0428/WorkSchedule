@@ -28,50 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.weekly7CheckBox = new System.Windows.Forms.CheckBox();
+            this.weekly48CheckBox = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.daily10CheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // checkBox3
+            // weekly7CheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(358, 270);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(132, 16);
-            this.checkBox3.TabIndex = 10;
-            this.checkBox3.Text = "一周不連續上班七天";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.weekly7CheckBox.AutoSize = true;
+            this.weekly7CheckBox.Checked = true;
+            this.weekly7CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.weekly7CheckBox.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.weekly7CheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.weekly7CheckBox.Location = new System.Drawing.Point(389, 409);
+            this.weekly7CheckBox.Name = "weekly7CheckBox";
+            this.weekly7CheckBox.Size = new System.Drawing.Size(187, 20);
+            this.weekly7CheckBox.TabIndex = 10;
+            this.weekly7CheckBox.Text = "一周不得連續上班七天";
+            this.weekly7CheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // weekly48CheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(358, 236);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(120, 16);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "一周不超過48小時";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.weekly48CheckBox.AutoSize = true;
+            this.weekly48CheckBox.Checked = true;
+            this.weekly48CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.weekly48CheckBox.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.weekly48CheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.weekly48CheckBox.Location = new System.Drawing.Point(389, 348);
+            this.weekly48CheckBox.Name = "weekly48CheckBox";
+            this.weekly48CheckBox.Size = new System.Drawing.Size(187, 20);
+            this.weekly48CheckBox.TabIndex = 11;
+            this.weekly48CheckBox.Text = "一周不得超過 48 小時";
+            this.weekly48CheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // label1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(358, 202);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(114, 16);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "一天不超過8小時";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("標楷體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(385, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(230, 21);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "請勾選勞基法檢查規則";
+            // 
+            // daily10CheckBox
+            // 
+            this.daily10CheckBox.AutoSize = true;
+            this.daily10CheckBox.Checked = true;
+            this.daily10CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.daily10CheckBox.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.daily10CheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.daily10CheckBox.Location = new System.Drawing.Point(389, 289);
+            this.daily10CheckBox.Name = "daily10CheckBox";
+            this.daily10CheckBox.Size = new System.Drawing.Size(187, 20);
+            this.daily10CheckBox.TabIndex = 11;
+            this.daily10CheckBox.Text = "一天不得超過 10 小時";
+            this.daily10CheckBox.UseVisualStyleBackColor = true;
             // 
             // SettingControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.weekly7CheckBox);
+            this.Controls.Add(this.daily10CheckBox);
+            this.Controls.Add(this.weekly48CheckBox);
             this.Name = "SettingControl";
-            this.Size = new System.Drawing.Size(1005, 814);
+            this.Size = new System.Drawing.Size(1060, 814);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,8 +105,9 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox weekly7CheckBox;
+        private System.Windows.Forms.CheckBox weekly48CheckBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox daily10CheckBox;
     }
 }

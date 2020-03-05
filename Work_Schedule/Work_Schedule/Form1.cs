@@ -90,7 +90,15 @@ namespace Work_Schedule
 
         private void QuationMarkButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("使用說明：(待新增)");
+            MessageBox.Show("\t\t          排班系統使用說明      \n\n"+
+                            "班表輸入時\n"+
+                            "  1.可以使用24小時制也可以使用12小時制排班，\n"+
+                            "    ex：7 - 12　(5小時)\n"+
+                            "        　7 - 7　(12小時)\n" +
+                            "        　7 - 19　(12小時)\n" +
+                            "     ★但請注意 7 - 8 程式判定為1小時而非13小時，如需排定13小時需輸入7 - 20\n\n" +
+                            "  2.兩段班制請使用 \" / \" 來做區隔\n" +
+                            "    ex：7 - 1 / 5 - 9　(10小時)\n");
         }
 
     }
