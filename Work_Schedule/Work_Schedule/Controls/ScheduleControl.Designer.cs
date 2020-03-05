@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,7 +52,27 @@
             this.day14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.day15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CheckButton = new System.Windows.Forms.Button();
+            this.DownSchedule = new System.Windows.Forms.DataGridView();
+            this.DownName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DownTitle = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.day16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.day31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UpSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DownSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -65,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(5, 516);
+            this.label2.Location = new System.Drawing.Point(2, 475);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 174);
             this.label2.TabIndex = 1287;
@@ -89,14 +110,14 @@
             this.UpSchedule.AllowUserToDeleteRows = false;
             this.UpSchedule.AllowUserToResizeColumns = false;
             this.UpSchedule.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UpSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UpSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.UpSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UpSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UpName,
@@ -116,20 +137,19 @@
             this.day13,
             this.day14,
             this.day15});
-            this.UpSchedule.Location = new System.Drawing.Point(36, 63);
+            this.UpSchedule.Location = new System.Drawing.Point(38, 63);
             this.UpSchedule.Name = "UpSchedule";
             this.UpSchedule.RowHeadersVisible = false;
             this.UpSchedule.RowTemplate.Height = 24;
             this.UpSchedule.ShowCellToolTips = false;
-            this.UpSchedule.Size = new System.Drawing.Size(966, 328);
+            this.UpSchedule.Size = new System.Drawing.Size(966, 310);
             this.UpSchedule.TabIndex = 1289;
-            this.UpSchedule.Rows.Add(12);
             // 
             // UpName
             // 
             this.UpName.HeaderText = "姓名";
             this.UpName.Name = "UpName";
-            this.UpName.Width = 70;
+            this.UpName.Width = 68;
             // 
             // UpTitle
             // 
@@ -229,8 +249,8 @@
             // 
             // CheckButton
             // 
-            this.CheckButton.Font = new System.Drawing.Font("標楷體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.CheckButton.Location = new System.Drawing.Point(728, 416);
+            this.CheckButton.Font = new System.Drawing.Font("DFKai-SB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.CheckButton.Location = new System.Drawing.Point(772, 11);
             this.CheckButton.Name = "CheckButton";
             this.CheckButton.Size = new System.Drawing.Size(96, 46);
             this.CheckButton.TabIndex = 1290;
@@ -238,12 +258,163 @@
             this.CheckButton.UseVisualStyleBackColor = true;
             this.CheckButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // DownSchedule
+            // 
+            this.DownSchedule.AllowUserToAddRows = false;
+            this.DownSchedule.AllowUserToDeleteRows = false;
+            this.DownSchedule.AllowUserToResizeColumns = false;
+            this.DownSchedule.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DownSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DownSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DownSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DownName,
+            this.DownTitle,
+            this.day16,
+            this.day17,
+            this.day18,
+            this.day19,
+            this.day20,
+            this.day21,
+            this.day22,
+            this.day23,
+            this.day24,
+            this.day25,
+            this.day26,
+            this.day27,
+            this.day28,
+            this.day29,
+            this.day30,
+            this.day31});
+            this.DownSchedule.Location = new System.Drawing.Point(38, 411);
+            this.DownSchedule.Name = "DownSchedule";
+            this.DownSchedule.RowHeadersVisible = false;
+            this.DownSchedule.RowTemplate.Height = 24;
+            this.DownSchedule.ShowCellToolTips = false;
+            this.DownSchedule.Size = new System.Drawing.Size(966, 327);
+            this.DownSchedule.TabIndex = 1289;
+            // 
+            // DownName
+            // 
+            this.DownName.HeaderText = "姓名";
+            this.DownName.Name = "DownName";
+            this.DownName.Width = 68;
+            // 
+            // DownTitle
+            // 
+            this.DownTitle.HeaderText = "職稱";
+            this.DownTitle.Name = "DownTitle";
+            this.DownTitle.Width = 70;
+            // 
+            // day16
+            // 
+            this.day16.HeaderText = "16";
+            this.day16.Name = "day16";
+            this.day16.Width = 55;
+            // 
+            // day17
+            // 
+            this.day17.HeaderText = "17";
+            this.day17.Name = "day17";
+            this.day17.Width = 55;
+            // 
+            // day18
+            // 
+            this.day18.HeaderText = "18";
+            this.day18.Name = "day18";
+            this.day18.Width = 55;
+            // 
+            // day19
+            // 
+            this.day19.HeaderText = "19";
+            this.day19.Name = "day19";
+            this.day19.Width = 55;
+            // 
+            // day20
+            // 
+            this.day20.HeaderText = "20";
+            this.day20.Name = "day20";
+            this.day20.Width = 55;
+            // 
+            // day21
+            // 
+            this.day21.HeaderText = "21";
+            this.day21.Name = "day21";
+            this.day21.Width = 55;
+            // 
+            // day22
+            // 
+            this.day22.HeaderText = "22";
+            this.day22.Name = "day22";
+            this.day22.Width = 55;
+            // 
+            // day23
+            // 
+            this.day23.HeaderText = "23";
+            this.day23.Name = "day23";
+            this.day23.Width = 55;
+            // 
+            // day24
+            // 
+            this.day24.HeaderText = "24";
+            this.day24.Name = "day24";
+            this.day24.Width = 55;
+            // 
+            // day25
+            // 
+            this.day25.HeaderText = "25";
+            this.day25.Name = "day25";
+            this.day25.Width = 55;
+            // 
+            // day26
+            // 
+            this.day26.HeaderText = "26";
+            this.day26.Name = "day26";
+            this.day26.Width = 55;
+            // 
+            // day27
+            // 
+            this.day27.HeaderText = "27";
+            this.day27.Name = "day27";
+            this.day27.Width = 55;
+            // 
+            // day28
+            // 
+            this.day28.HeaderText = "28";
+            this.day28.Name = "day28";
+            this.day28.Width = 55;
+            // 
+            // day29
+            // 
+            this.day29.HeaderText = "29";
+            this.day29.Name = "day29";
+            this.day29.Width = 55;
+            // 
+            // day30
+            // 
+            this.day30.HeaderText = "30";
+            this.day30.Name = "day30";
+            this.day30.Width = 55;
+            // 
+            // day31
+            // 
+            this.day31.HeaderText = "31";
+            this.day31.Name = "day31";
+            this.day31.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // ScheduleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.Controls.Add(this.CheckButton);
+            this.Controls.Add(this.DownSchedule);
             this.Controls.Add(this.UpSchedule);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
@@ -251,8 +422,12 @@
             this.Name = "ScheduleControl";
             this.Size = new System.Drawing.Size(1005, 814);
             ((System.ComponentModel.ISupportInitialize)(this.UpSchedule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DownSchedule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
+            this.UpSchedule.Rows.Add(12);
+            this.DownSchedule.Rows.Add(12);
 
         }
 
@@ -262,6 +437,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView UpSchedule;
+        private System.Windows.Forms.Button CheckButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn UpName;
         private System.Windows.Forms.DataGridViewComboBoxColumn UpTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn day1;
@@ -279,6 +455,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn day13;
         private System.Windows.Forms.DataGridViewTextBoxColumn day14;
         private System.Windows.Forms.DataGridViewTextBoxColumn day15;
-        private System.Windows.Forms.Button CheckButton;
+        private System.Windows.Forms.DataGridView DownSchedule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DownName;
+        private System.Windows.Forms.DataGridViewComboBoxColumn DownTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn day31;
     }
 }
