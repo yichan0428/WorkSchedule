@@ -32,7 +32,6 @@ C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_S
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.pdb
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\bin\Debug\Work_Schedule.exe
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\bin\Debug\Work_Schedule.pdb
-C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.csprojResolveAssemblyReference.cache
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.Controls.Home.resources
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.SalaryControl.resources
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.ScheduleControl.resources
@@ -41,3 +40,4 @@ C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_S
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.Properties.Resources.resources
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.TimeControl.resources
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.csproj.GenerateResource.Cache
+C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.csprojResolveAssemblyReference.cache

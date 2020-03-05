@@ -168,6 +168,30 @@
   <metadata name="day15.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+<<<<<<< HEAD
+=======
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CheckButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAM7SURBVFhH7VdJa1NRGI04Llw5oNWFCopFrXXlsJHgyji7CGYmdZGNG3VpW6jgQqh2QhR3ulAE
+        wa3oXyiIi7QWQaxQ3VikrUJNtK3nPM5Nbl/eMze10k0PHJJ7vuF+d8j3XiLLWAji8fj6ZDLZnEqljmez
+        2ROZTKY1kUhsk/n/AJPtSafTN/E5iM9ZcC6AQ+AtFLRbYf8OrHQTkg6AZU3iwjIK7cNObVCahQGJjoJf
+        rMTkJPgcE3SAWbGDGjglH8Mx2A4rXWNA8CUE/7SSjWKcxqrWyKUGtLEg+H6y4qahxeXiBmz7Md/kD/L5
+        /DqZ64K+uAcPrXgW4bYTWMVmBNjbflUmD7j1B6D1gkXwKzgOjmDCHnCv3DxgfB02k+dzLpfbKFM4EHTf
+        BKHqu5K97YV2D/xt7AEsI767UCisVhh/PX2WfUByMLC6XXAqyfmDOW+d7WvpLnyBsBWM5XFg/JE6jxXc
+        QT0QqL7LJMH3pGTq9nnWYwn+FxTqAVrG2GHrlFwLOPBc6TiOVa+U1gLOSK/HElZ43ktmgUcC2zf5vJU8
+        H7p8JtFTySyg39LJCW6lTyO58nMKi7A1Q7uiIfM8k98s5qptUEh6SA7cphuSGThsdHAS9+QIfE/5iijh
+        p3tWIWbyEbAoiXna5TsH34OSq4AhZhxQQJtk6nZ3uyiZ9+I0i1AhZyTbk9N/SjLzXJbG/CclVwFDpQAk
+        zUum/sPo4BCq3yKTVwSpIcdN8DGTk5UCYGszemABEFsth7AjIOcVYaDJ3/l8K0cAe6elt0iuAkn51DMO
+        TyQzsMfSDd+jq22XC7d9J7RRnw8X0i0XLuTvl5BAwBs5TbD5UENh+zEO6n7D3Ak0mq347l85+Qv2ZuZQ
+        M/pOHcc7SC0QKCCwESHIbqc2eTz+I/Jorx7xkCp6eCMKa8VqJK+ku/BlNBpdxdhYLLYWY7dWTMDxjpKQ
+        jyS7Poxo6/c9jB4bO1Z/W3I4MJHr45jvf9NiEcl5WffJzQMmvwbN5BkLvXx+4PIs3QuJAYKW7pXMAMFO
+        L6W82dTAxXspNVCDavi1HOx1PnMXYCX1/pjM0Ibd6AIX749JELCyyl8zkt+pybyMBhCJ/AFgZ3DXhGeV
+        jgAAAABJRU5ErkJggg==
+</value>
+  </data>
+>>>>>>> master
   <metadata name="DownName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

@@ -41,15 +41,15 @@
             this.ScheduleButton = new System.Windows.Forms.Button();
             this.SettingButton = new System.Windows.Forms.Button();
             this.DesktopPanel = new System.Windows.Forms.Panel();
+            this.MinimumButton = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.TitlePanel = new System.Windows.Forms.Panel();
+            this.SubTitle = new System.Windows.Forms.Label();
             this.home1 = new Work_Schedule.Controls.Home();
             this.scheduleControl1 = new Work_Schedule.ScheduleControl();
             this.settingControl1 = new Work_Schedule.SettingControl();
             this.salaryControl1 = new Work_Schedule.SalaryControl();
             this.timeControl1 = new Work_Schedule.TimeControl();
-            this.MinimumButton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.TitlePanel = new System.Windows.Forms.Panel();
-            this.SubTitle = new System.Windows.Forms.Label();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.DesktopPanel.SuspendLayout();
@@ -236,7 +236,7 @@
             this.SettingButton.Name = "SettingButton";
             this.SettingButton.Size = new System.Drawing.Size(142, 64);
             this.SettingButton.TabIndex = 0;
-            this.SettingButton.Text = " 勞健保設定";
+            this.SettingButton.Text = " 勞基法設定";
             this.SettingButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SettingButton.UseVisualStyleBackColor = false;
             this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
@@ -252,44 +252,8 @@
             this.DesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DesktopPanel.Location = new System.Drawing.Point(150, 101);
             this.DesktopPanel.Name = "DesktopPanel";
-            this.DesktopPanel.Size = new System.Drawing.Size(1005, 750);
+            this.DesktopPanel.Size = new System.Drawing.Size(1060, 750);
             this.DesktopPanel.TabIndex = 2;
-            // 
-            // home1
-            // 
-            this.home1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.home1.Location = new System.Drawing.Point(0, 0);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(1005, 814);
-            this.home1.TabIndex = 4;
-            // 
-            // scheduleControl1
-            // 
-            this.scheduleControl1.Location = new System.Drawing.Point(0, 0);
-            this.scheduleControl1.Name = "scheduleControl1";
-            this.scheduleControl1.Size = new System.Drawing.Size(1005, 814);
-            this.scheduleControl1.TabIndex = 3;
-            // 
-            // settingControl1
-            // 
-            this.settingControl1.Location = new System.Drawing.Point(0, 0);
-            this.settingControl1.Name = "settingControl1";
-            this.settingControl1.Size = new System.Drawing.Size(1005, 814);
-            this.settingControl1.TabIndex = 2;
-            // 
-            // salaryControl1
-            // 
-            this.salaryControl1.Location = new System.Drawing.Point(0, -1);
-            this.salaryControl1.Name = "salaryControl1";
-            this.salaryControl1.Size = new System.Drawing.Size(1005, 814);
-            this.salaryControl1.TabIndex = 1;
-            // 
-            // timeControl1
-            // 
-            this.timeControl1.Location = new System.Drawing.Point(0, 0);
-            this.timeControl1.Name = "timeControl1";
-            this.timeControl1.Size = new System.Drawing.Size(1005, 814);
-            this.timeControl1.TabIndex = 0;
             // 
             // MinimumButton
             // 
@@ -304,7 +268,7 @@
             this.MinimumButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.MinimumButton.Image = ((System.Drawing.Image)(resources.GetObject("MinimumButton.Image")));
             this.MinimumButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MinimumButton.Location = new System.Drawing.Point(930, 23);
+            this.MinimumButton.Location = new System.Drawing.Point(978, 26);
             this.MinimumButton.Name = "MinimumButton";
             this.MinimumButton.Size = new System.Drawing.Size(28, 28);
             this.MinimumButton.TabIndex = 0;
@@ -325,7 +289,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(963, 26);
+            this.button5.Location = new System.Drawing.Point(1011, 26);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(28, 28);
             this.button5.TabIndex = 0;
@@ -342,7 +306,7 @@
             this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitlePanel.Location = new System.Drawing.Point(150, 0);
             this.TitlePanel.Name = "TitlePanel";
-            this.TitlePanel.Size = new System.Drawing.Size(1005, 101);
+            this.TitlePanel.Size = new System.Drawing.Size(1060, 101);
             this.TitlePanel.TabIndex = 1;
             this.TitlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseDown);
             this.TitlePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseMove);
@@ -360,12 +324,49 @@
             this.SubTitle.Text = " ";
             this.SubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // home1
+            // 
+            this.home1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.home1.Location = new System.Drawing.Point(0, 0);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(1060, 814);
+            this.home1.TabIndex = 4;
+            // 
+            // scheduleControl1
+            // 
+            this.scheduleControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.scheduleControl1.Location = new System.Drawing.Point(0, 0);
+            this.scheduleControl1.Name = "scheduleControl1";
+            this.scheduleControl1.Size = new System.Drawing.Size(1060, 814);
+            this.scheduleControl1.TabIndex = 3;
+            // 
+            // settingControl1
+            // 
+            this.settingControl1.Location = new System.Drawing.Point(0, 0);
+            this.settingControl1.Name = "settingControl1";
+            this.settingControl1.Size = new System.Drawing.Size(1060, 814);
+            this.settingControl1.TabIndex = 2;
+            // 
+            // salaryControl1
+            // 
+            this.salaryControl1.Location = new System.Drawing.Point(0, 0);
+            this.salaryControl1.Name = "salaryControl1";
+            this.salaryControl1.Size = new System.Drawing.Size(1060, 814);
+            this.salaryControl1.TabIndex = 1;
+            // 
+            // timeControl1
+            // 
+            this.timeControl1.Location = new System.Drawing.Point(-161, 0);
+            this.timeControl1.Name = "timeControl1";
+            this.timeControl1.Size = new System.Drawing.Size(1221, 814);
+            this.timeControl1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(1155, 851);
+            this.ClientSize = new System.Drawing.Size(1210, 851);
             this.Controls.Add(this.DesktopPanel);
             this.Controls.Add(this.TitlePanel);
             this.Controls.Add(this.MenuPanel);
@@ -400,13 +401,13 @@
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Panel TitlePanel;
         private TimeControl timeControl1;
-        private SalaryControl salaryControl1;
         private ScheduleControl scheduleControl1;
         private SettingControl settingControl1;
         private System.Windows.Forms.Label MadeTime;
         private System.Windows.Forms.Label SubTitle;
-        private Controls.Home home1;
         private System.Windows.Forms.Button QuationMarkButton;
+        private Controls.Home home1;
+        private SalaryControl salaryControl1;
     }
 }
 

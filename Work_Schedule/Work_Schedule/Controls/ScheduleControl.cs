@@ -83,6 +83,33 @@ namespace Work_Schedule
             //string str = "" + UpSchedule.Rows[0].Cells[0].Value;
             //MessageBox.Show("" + checkrule.daily8(str));
             MessageBox.Show(checkrule.TotalCheck(array_merge));
+<<<<<<< HEAD
+=======
+        }
+
+        private void ScheduleControl_Load(object sender, EventArgs e)
+        {
+            //
+            // Add rows initially
+            //
+            UpSchedule.Rows.Add(12);
+            DownSchedule.Rows.Add(12);
+            //
+            //disable sort in every columns
+            //
+            foreach (DataGridViewColumn column in UpSchedule.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            foreach (DataGridViewColumn column in DownSchedule.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            //
+            //Set ComboBox in Title
+            //
+
+>>>>>>> master
         }
     }
 }
