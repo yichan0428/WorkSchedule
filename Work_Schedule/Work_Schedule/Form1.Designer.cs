@@ -328,7 +328,7 @@
             this.home1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.home1.Location = new System.Drawing.Point(0, 0);
             this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(1060, 814);
+            this.home1.Size = new System.Drawing.Size(1060, 750);
             this.home1.TabIndex = 4;
             // 
             // scheduleControl1
@@ -361,7 +361,7 @@
             this.timeControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.timeControl1.Location = new System.Drawing.Point(0, 0);
             this.timeControl1.Name = "timeControl1";
-            this.timeControl1.Size = new System.Drawing.Size(1060, 814);
+            this.timeControl1.Size = new System.Drawing.Size(1060, 750);
             this.timeControl1.TabIndex = 0;
             // 
             // MainForm

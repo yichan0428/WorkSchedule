@@ -86,6 +86,12 @@
     <Compile Include="Controls\TimeControl.Designer.cs">
       <DependentUpon>TimeControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TimeAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimeAxis.Designer.cs">
+      <DependentUpon>TimeAxis.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="Controls\TimeControl.resx">
       <DependentUpon>TimeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeAxis.resx">
+      <DependentUpon>TimeAxis.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

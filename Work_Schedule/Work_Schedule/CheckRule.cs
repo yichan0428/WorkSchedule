@@ -26,20 +26,28 @@ namespace Work_Schedule
                 return TotalStr;
         }
         public int CauculateTimes(string str)
-        {   
-            str += "/0/0";  //gurantee value2 is exist
-            string[] strArray = str.Split(new char[2] {'-' , '/'});
-            int Value1 = int.Parse(strArray[1]) - int.Parse(strArray[0]);
-            int Value2 = int.Parse(strArray[3]) - int.Parse(strArray[2]);
-            if (Value1 <= 0 )
+        {
+
+            try
             {
-                Value1 += 12;
+                str += "/0/0";  //gurantee value2 is exist
+                string[] strArray = str.Split(new char[2] { '-', '/' });
+                int Value1 = int.Parse(strArray[1]) - int.Parse(strArray[0]);
+                int Value2 = int.Parse(strArray[3]) - int.Parse(strArray[2]);
+                if (Value1 <= 0)
+                {
+                    Value1 += 12;
+                }
+                if (Value2 < 0)
+                {
+                    Value2 += 12;
+                }
+                return Value1 + Value2;
             }
-            if (Value2 < 0)
+            catch
             {
-                Value2 += 12;
+                return 0;
             }
-            return Value1 + Value2;
         }
         public string daily10(string[,] s)
             {
