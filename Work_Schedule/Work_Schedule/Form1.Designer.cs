@@ -98,7 +98,7 @@
             // MadeTime
             // 
             this.MadeTime.AutoSize = true;
-            this.MadeTime.Font = new System.Drawing.Font("標楷體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.MadeTime.Font = new System.Drawing.Font("DFKai-SB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.MadeTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.MadeTime.Location = new System.Drawing.Point(80, 141);
             this.MadeTime.Name = "MadeTime";
@@ -109,7 +109,7 @@
             // Title
             // 
             this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("標楷體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Title.Font = new System.Drawing.Font("DFKai-SB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.Title.Location = new System.Drawing.Point(18, 104);
             this.Title.Name = "Title";
@@ -155,7 +155,6 @@
             this.QuationMark.Text = "?";
             this.QuationMark.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.QuationMark.UseVisualStyleBackColor = false;
-            this.QuationMark.Click += new System.EventHandler(this.QuationMark_Click);
             // 
             // SalaryButton
             // 
@@ -315,7 +314,7 @@
             // SubTitle
             // 
             this.SubTitle.AutoSize = true;
-            this.SubTitle.Font = new System.Drawing.Font("標楷體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SubTitle.Font = new System.Drawing.Font("DFKai-SB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.SubTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(115)))), ((int)(((byte)(117)))));
             this.SubTitle.Location = new System.Drawing.Point(414, 36);
             this.SubTitle.Name = "SubTitle";
@@ -335,6 +334,7 @@
             // scheduleControl1
             // 
             this.scheduleControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.scheduleControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.scheduleControl1.Location = new System.Drawing.Point(0, 0);
             this.scheduleControl1.Name = "scheduleControl1";
             this.scheduleControl1.Size = new System.Drawing.Size(1060, 814);
@@ -342,6 +342,7 @@
             // 
             // settingControl1
             // 
+            this.settingControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.settingControl1.Location = new System.Drawing.Point(0, 0);
             this.settingControl1.Name = "settingControl1";
             this.settingControl1.Size = new System.Drawing.Size(1060, 814);
@@ -349,16 +350,18 @@
             // 
             // salaryControl1
             // 
-            this.salaryControl1.Location = new System.Drawing.Point(0, 0);
+            this.salaryControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.salaryControl1.Location = new System.Drawing.Point(0, 528);
             this.salaryControl1.Name = "salaryControl1";
             this.salaryControl1.Size = new System.Drawing.Size(1060, 814);
             this.salaryControl1.TabIndex = 1;
             // 
             // timeControl1
             // 
-            this.timeControl1.Location = new System.Drawing.Point(-161, 0);
+            this.timeControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.timeControl1.Location = new System.Drawing.Point(0, 0);
             this.timeControl1.Name = "timeControl1";
-            this.timeControl1.Size = new System.Drawing.Size(1221, 814);
+            this.timeControl1.Size = new System.Drawing.Size(1060, 814);
             this.timeControl1.TabIndex = 0;
             // 
             // MainForm
@@ -400,7 +403,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Panel TitlePanel;
-        private TimeControl timeControl1;
         private ScheduleControl scheduleControl1;
         private SettingControl settingControl1;
         private System.Windows.Forms.Label MadeTime;
@@ -408,6 +410,7 @@
         private System.Windows.Forms.Button QuationMarkButton;
         private Controls.Home home1;
         private SalaryControl salaryControl1;
+        public TimeControl timeControl1;
     }
 }
 

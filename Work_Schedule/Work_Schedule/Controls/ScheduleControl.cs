@@ -12,14 +12,27 @@ namespace Work_Schedule
 {
     public partial class ScheduleControl : UserControl
     {
-
-        
+        /*If you want to call any value in schedulecontrol, 
+          you need to declare a public item to get value inderectly*/
+        public bool daily10, weekly7, weekly48;               
+        public string[,] stringarray = new string[24, 33];
+        //
+        //
+        //    
         public ScheduleControl()
         {
             InitializeComponent();
         }
-
+        //
+        //
+        //
         private void button1_Click(object sender, EventArgs e)
+        {
+            objtostring();
+            CheckRule checkrule = new CheckRule();
+            MessageBox.Show(checkrule.TotalCheck(stringarray, daily10, weekly7, weekly48));
+        }
+        public void objtostring()
         {
             // get datagridview data in a 2d array
             var array = new object[UpSchedule.RowCount, UpSchedule.ColumnCount];
@@ -41,15 +54,15 @@ namespace Work_Schedule
                 }
             }
             //
-            //merge two array
+            //merge two object array
             //
-            var array_merge = new object[24,33];
+            var array_merge = new object[24, 33];
 
             for (int i = 0; i < 12; i++)        //left and up is upschedule,left and down is empty
             {
                 for (int j = 0; j < 17; j++)
                 {
-                    if (array[i,j] != null)
+                    if (array[i, j] != null)
                         array_merge[i, j] = array[i, j];
                 }
             }
@@ -67,10 +80,10 @@ namespace Work_Schedule
                             array_merge[j, a] = array_down[i - 12, a - 15];
                         }
                     }
-                }                                                      
+                }
                 if (CountSame == 0)
                 {
-                        array_merge[i, 0] = array_down[i-12 , 0];
+                    array_merge[i, 0] = array_down[i - 12, 0];
                     for (int a = 17; a < 33; a++)
                     {
                         array_merge[i, a] = array_down[i - 12, a - 15];
@@ -78,11 +91,17 @@ namespace Work_Schedule
                 }
             }
 
+            for (int i = 0; i < 24; i++)
+            {
+                for (int j = 0; j < 33; j++)
+                {
+                    if (array_merge[i, j] == null)
+                        stringarray[i, j] = "";
+                    else
+                        stringarray[i, j] = array_merge[i, j].ToString();
+                }
+            }
 
-            CheckRule checkrule = new CheckRule();
-            //string str = "" + UpSchedule.Rows[0].Cells[0].Value;
-            //MessageBox.Show("" + checkrule.daily8(str));
-            MessageBox.Show(checkrule.TotalCheck(array_merge));
         }
 
         private void ScheduleControl_Load(object sender, EventArgs e)
@@ -103,10 +122,7 @@ namespace Work_Schedule
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            //
-            //Set ComboBox in Title
-            //
-
         }
+
     }
 }

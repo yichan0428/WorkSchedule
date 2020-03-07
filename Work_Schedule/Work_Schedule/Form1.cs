@@ -19,10 +19,6 @@ namespace Work_Schedule
             InitializeComponent();
             
         }
-        private void QuationMark_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("在此處新增使用說明");
-        }
 
         private void SettingButton_Click(object sender, EventArgs e)
         {
@@ -38,6 +34,9 @@ namespace Work_Schedule
             SidePanel.Top = ScheduleButton.Top;
             scheduleControl1.BringToFront();
             SubTitle.Text = "  班表";
+            scheduleControl1.daily10 = settingControl1.daily10CheckBox.Checked;  // determine whether settingcontrol works
+            scheduleControl1.weekly7 = settingControl1.weekly7CheckBox.Checked;
+            scheduleControl1.weekly48= settingControl1.weekly48CheckBox.Checked;
         }
 
         private void TimeButton_Click(object sender, EventArgs e)
@@ -46,6 +45,8 @@ namespace Work_Schedule
             SidePanel.Top = TimeButton.Top;
             timeControl1.BringToFront();
             SubTitle.Text = " 時間表";
+            scheduleControl1.objtostring();    //reset stringarray to show the value in schedulecontrol
+            timeControl1.timeaxis(scheduleControl1.stringarray);   //throw the array value in schedulecontrol to timecontrol by public method 
         }
 
         private void SalaryButton_Click(object sender, EventArgs e)
@@ -100,6 +101,5 @@ namespace Work_Schedule
                             "  2.兩段班制請使用 \" / \" 來做區隔\n" +
                             "    ex：7 - 1 / 5 - 9　(10小時)\n");
         }
-
     }
 }
