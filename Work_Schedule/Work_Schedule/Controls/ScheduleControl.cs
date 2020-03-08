@@ -17,12 +17,14 @@ namespace Work_Schedule
         public bool daily10, weekly7, weekly48;               
         public string[,] stringarray = new string[24, 33];
         public string[,] axisarray = new string[24, 33];
+        public string longstring = "";
         //
         //
         //    
         public ScheduleControl()
         {
             InitializeComponent();
+            
         }
         //
         //
@@ -33,6 +35,20 @@ namespace Work_Schedule
             CheckRule checkrule = new CheckRule();
             MessageBox.Show(checkrule.TotalCheck(stringarray, daily10, weekly7, weekly48));
         }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            objtostring();
+            Properties.Settings.Default.Test = longstring;          
+            Properties.Settings.Default.Save();
+            Properties.Settings.Default.Reload();
+
+        }
+        private void Open_Click(object sender, EventArgs e)
+        {
+            load();
+        }
+
         public void objtostring()
         {
             // get datagridview data in a 2d array
@@ -133,6 +149,38 @@ namespace Work_Schedule
                         axisarray[i, j] = axismerge[i, j].ToString();
                 }
             }
+            //
+            //longstring is used to make properties.setting
+            //
+            longstring = "";         //initialize
+            for (int i = 0; i < 12; i++)
+            {
+                for (int j = 0; j < 17; j++)
+                {
+                    if (array[i, j] == null)
+                        longstring += "@";
+                    else
+                    {
+                        longstring += array[i, j].ToString();
+                        longstring += "@";
+                    }
+                        
+                }
+            }
+            for (int i = 0; i < 12; i++)
+            {
+                for (int j = 0; j < 18; j++)
+                {
+                    if (array_down[i, j] == null)
+                        longstring += "@";
+                    else
+                    {
+                        longstring += array_down[i, j].ToString();
+                        longstring += "@";
+                    }
+
+                }
+            }
 
         }
 
@@ -143,6 +191,8 @@ namespace Work_Schedule
             //
             UpSchedule.Rows.Add(12);
             DownSchedule.Rows.Add(12);
+          
+
             //
             //disable sort in every columns
             //
@@ -155,6 +205,23 @@ namespace Work_Schedule
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
         }
-
+        public void load()
+        {
+            string[] SaveArray = (Properties.Settings.Default.Test).Split(new char[1] { '@' });
+            for (int i = 0; i < 12; i++)
+            {
+                for (int j = 0; j < 17; j++)
+                {
+                    UpSchedule.Rows[i].Cells[j].Value = SaveArray[i * 17 + j];
+                }
+            }
+            for (int i = 0; i < 12; i++)
+            {
+                for (int j = 0; j < 18; j++)
+                {
+                    DownSchedule.Rows[i].Cells[j].Value = SaveArray[17 * 12 + i * 18 + j];
+                }
+            }
+        }
     }
 }

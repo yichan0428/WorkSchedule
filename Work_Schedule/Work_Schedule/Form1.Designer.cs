@@ -80,13 +80,12 @@
             this.QuationMarkButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.QuationMarkButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.QuationMarkButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.QuationMarkButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.QuationMarkButton.FlatAppearance.BorderSize = 0;
+            this.QuationMarkButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.QuationMarkButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.QuationMarkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuationMarkButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.QuationMarkButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.QuationMarkButton.Location = new System.Drawing.Point(12, 811);
+            this.QuationMarkButton.Location = new System.Drawing.Point(22, 800);
             this.QuationMarkButton.Name = "QuationMarkButton";
             this.QuationMarkButton.Size = new System.Drawing.Size(28, 28);
             this.QuationMarkButton.TabIndex = 1;
@@ -307,9 +306,6 @@
             this.TitlePanel.Name = "TitlePanel";
             this.TitlePanel.Size = new System.Drawing.Size(1060, 101);
             this.TitlePanel.TabIndex = 1;
-            this.TitlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseDown);
-            this.TitlePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseMove);
-            this.TitlePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TitlePanel_MouseUp);
             // 
             // SubTitle
             // 
@@ -335,7 +331,7 @@
             // 
             this.scheduleControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.scheduleControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.scheduleControl1.Location = new System.Drawing.Point(0, 0);
+            this.scheduleControl1.Location = new System.Drawing.Point(0, -64);
             this.scheduleControl1.Name = "scheduleControl1";
             this.scheduleControl1.Size = new System.Drawing.Size(1060, 814);
             this.scheduleControl1.TabIndex = 3;
@@ -343,7 +339,7 @@
             // settingControl1
             // 
             this.settingControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.settingControl1.Location = new System.Drawing.Point(0, 0);
+            this.settingControl1.Location = new System.Drawing.Point(3, -64);
             this.settingControl1.Name = "settingControl1";
             this.settingControl1.Size = new System.Drawing.Size(1060, 814);
             this.settingControl1.TabIndex = 2;
@@ -351,9 +347,9 @@
             // salaryControl1
             // 
             this.salaryControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.salaryControl1.Location = new System.Drawing.Point(0, 528);
+            this.salaryControl1.Location = new System.Drawing.Point(0, 0);
             this.salaryControl1.Name = "salaryControl1";
-            this.salaryControl1.Size = new System.Drawing.Size(1060, 814);
+            this.salaryControl1.Size = new System.Drawing.Size(1060, 749);
             this.salaryControl1.TabIndex = 1;
             // 
             // timeControl1
