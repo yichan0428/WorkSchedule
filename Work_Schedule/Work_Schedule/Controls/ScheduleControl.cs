@@ -207,20 +207,27 @@ namespace Work_Schedule
         }
         public void load()
         {
-            string[] SaveArray = (Properties.Settings.Default.Test).Split(new char[1] { '@' });
-            for (int i = 0; i < 12; i++)
+            try 
             {
-                for (int j = 0; j < 17; j++)
+                string[] SaveArray = (Properties.Settings.Default.Test).Split(new char[1] { '@' });
+                for (int i = 0; i < 12; i++)
                 {
-                    UpSchedule.Rows[i].Cells[j].Value = SaveArray[i * 17 + j];
+                    for (int j = 0; j < 17; j++)
+                    {
+                        UpSchedule.Rows[i].Cells[j].Value = SaveArray[i * 17 + j];
+                    }
+                }
+                for (int i = 0; i < 12; i++)
+                {
+                    for (int j = 0; j < 18; j++)
+                    {
+                        DownSchedule.Rows[i].Cells[j].Value = SaveArray[17 * 12 + i * 18 + j];
+                    }
                 }
             }
-            for (int i = 0; i < 12; i++)
+            catch 
             {
-                for (int j = 0; j < 18; j++)
-                {
-                    DownSchedule.Rows[i].Cells[j].Value = SaveArray[17 * 12 + i * 18 + j];
-                }
+                MessageBox.Show("請先儲存第一筆資料再進行載入");
             }
         }
     }

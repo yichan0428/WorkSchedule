@@ -42,3 +42,4 @@ C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_S
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.csprojResolveAssemblyReference.cache
 C:\Users\chan\Desktop\WorkScheduleByC#\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.TimeAxis.resources
 C:\Users\yicha\Desktop\WorkSchedule\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.TimeAxis.resources
+C:\Users\chan\Desktop\WorkScheduleByC#\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.csprojResolveAssemblyReference.cache
