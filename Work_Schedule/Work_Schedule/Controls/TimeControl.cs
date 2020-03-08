@@ -13,6 +13,7 @@ namespace Work_Schedule
     public partial class TimeControl : UserControl
     {
         public string[,] stringarray;
+        public string[,] nullarray =new string[24,33];
         public int a = 0;   //4*i
         public TimeControl()
         {
@@ -30,21 +31,15 @@ namespace Work_Schedule
         {
             GenerateName();
             GenerateDay();
-            timeAxis1.GenerateTotalBar(stringarray, comboBox1.SelectedIndex * 4 + 2);
-            timeAxis2.GenerateTotalBar(stringarray, comboBox1.SelectedIndex * 4 + 3);
-            timeAxis3.GenerateTotalBar(stringarray, comboBox1.SelectedIndex * 4 + 4);
-            if (comboBox1.SelectedIndex < 7)
-                timeAxis4.GenerateTotalBar(stringarray, comboBox1.SelectedIndex * 4 + 5);
+            GenerateTimeAxis();
         }
         public void timeaxis(string[,] stringarray)
         {
             this.stringarray = stringarray;    //throw the stringarray in schedulecontrol into stringarray in timecontrol, then it can be used in timecontrol 
             comboBox1.SelectedIndex = 0;
-            timeAxis1.GenerateTotalBar(stringarray, comboBox1.SelectedIndex * 4 + 2);
-            timeAxis2.GenerateTotalBar(stringarray, comboBox1.SelectedIndex * 4 + 3);
-            timeAxis3.GenerateTotalBar(stringarray, comboBox1.SelectedIndex * 4 + 4);
-            if (comboBox1.SelectedIndex < 7)
-                timeAxis4.GenerateTotalBar(stringarray, comboBox1.SelectedIndex * 4 + 5);
+            GenerateName();
+            GenerateDay();
+            GenerateTimeAxis();
         }
 
         private void GenerateName()
@@ -174,6 +169,21 @@ namespace Work_Schedule
                 timeAxis4.TimeName10.Text = this.stringarray[22, 0];
                 timeAxis4.TimeName11.Text = this.stringarray[23, 0];
 
+                if (comboBox1.SelectedIndex == 7)
+                {
+                    timeAxis4.TimeName0.Text = "";
+                    timeAxis4.TimeName1.Text = "";
+                    timeAxis4.TimeName2.Text = "";
+                    timeAxis4.TimeName3.Text = "";
+                    timeAxis4.TimeName4.Text = "";
+                    timeAxis4.TimeName5.Text = "";
+                    timeAxis4.TimeName6.Text = "";
+                    timeAxis4.TimeName7.Text = "";
+                    timeAxis4.TimeName8.Text = "";
+                    timeAxis4.TimeName9.Text = "";
+                    timeAxis4.TimeName10.Text = "";
+                    timeAxis4.TimeName11.Text = "";
+                }
             }
         }  
         private void GenerateDay()
@@ -185,7 +195,36 @@ namespace Work_Schedule
             if (comboBox1.SelectedIndex == 7)
                 timeAxis4.DayText.Text = "";
         }
+        private void GenerateTimeAxis()
+        {
+            //build a nullarray with 0s
+            for (int i = 0; i < 12; i++)
+            {
+                for (int j = 0; j < 33; j++)
+                {
+                    nullarray[i, j] = "";
+                }
+            }
 
+            if (comboBox1.SelectedIndex <= 3)   //let different day show different bar , 0 is upshcedule and 1 is downschedule 
+            {
+                timeAxis1.GenerateTotalBar(stringarray, 0, comboBox1.SelectedIndex * 4 + 2);
+                timeAxis2.GenerateTotalBar(stringarray, 0, comboBox1.SelectedIndex * 4 + 3);
+                timeAxis3.GenerateTotalBar(stringarray, 0, comboBox1.SelectedIndex * 4 + 4);
+                timeAxis4.GenerateTotalBar(stringarray, 0, comboBox1.SelectedIndex * 4 + 4);
+            }
+            else
+            {
+                timeAxis1.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 2);
+                timeAxis2.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 3);
+                timeAxis3.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 4);
+                timeAxis4.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 4);
+            }
+            if (comboBox1.SelectedIndex  == 3) //Right and down timeaxis is  downschedule when 16day and do not show anything in 32day
+                timeAxis4.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 5);
+            if (comboBox1.SelectedIndex == 7) //Right and down timeaxis is  downschedule when 16day and do not show anything in 32day
+                timeAxis4.GenerateTotalBar(nullarray, 1, comboBox1.SelectedIndex * 4 + 1);
+        } 
 
     }
 }

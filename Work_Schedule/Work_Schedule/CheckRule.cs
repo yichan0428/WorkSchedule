@@ -25,15 +25,15 @@ namespace Work_Schedule
             else
                 return TotalStr;
         }
-        public int CauculateTimes(string str)
+        public double CauculateTimes(string str)
         {
 
             try
             {
                 str += "/0/0";  //gurantee value2 is exist
                 string[] strArray = str.Split(new char[2] { '-', '/' });
-                int Value1 = int.Parse(strArray[1]) - int.Parse(strArray[0]);
-                int Value2 = int.Parse(strArray[3]) - int.Parse(strArray[2]);
+                Double Value1 = Convert.ToDouble(strArray[1]) - Convert.ToDouble(strArray[0]);
+                Double Value2 = Convert.ToDouble(strArray[3]) - Convert.ToDouble(strArray[2]);
                 if (Value1 <= 0)
                 {
                     Value1 += 12;
@@ -99,7 +99,7 @@ namespace Work_Schedule
             {
                 for (int j = 2; j < 27; j++)
                 {
-                    int count48 = 0;
+                    double count48 = 0;
                     for (int k = 0; k < 7; k++)
                         if (s[i, 0] != "" && s[i, j+k] != "" && CauculateTimes(s[i, j+k]) > 0)
                         {

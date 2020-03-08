@@ -16,6 +16,7 @@ namespace Work_Schedule
           you need to declare a public item to get value inderectly*/
         public bool daily10, weekly7, weekly48;               
         public string[,] stringarray = new string[24, 33];
+        public string[,] axisarray = new string[24, 33];
         //
         //
         //    
@@ -90,7 +91,28 @@ namespace Work_Schedule
                     }
                 }
             }
+            var axismerge = new object[24, 33];
+            for (int i = 0; i < 12; i++)        //left and up is upschedule
+            {
+                for (int j = 0; j < 17; j++)
+                {
+                    if (array[i, j] != null)
+                        axismerge[i, j] = array[i, j];
+                }
+            }
+            for (int i = 12; i < 24; i++)        //right and down is downschedule
+            {
+                if (array_down[i-12, 0] != null)
+                    axismerge[i , 0] = array_down[i - 12, 0];
+                for (int j = 17; j < 33; j++)
+                {
+                    if (array_down[i-12, j-15] != null)
+                        axismerge[i , j] = array_down[i -12, j-15];
+                }
+            }
 
+            //
+            //convert arraymerge and axismerge to stringarray and axisarray seperately
             for (int i = 0; i < 24; i++)
             {
                 for (int j = 0; j < 33; j++)
@@ -99,6 +121,16 @@ namespace Work_Schedule
                         stringarray[i, j] = "";
                     else
                         stringarray[i, j] = array_merge[i, j].ToString();
+                }
+            }
+            for (int i = 0; i < 24; i++)
+            {
+                for (int j = 0; j < 33; j++)
+                {
+                    if (axismerge[i, j] == null)
+                        axisarray[i, j] = "";
+                    else
+                        axisarray[i, j] = axismerge[i, j].ToString();
                 }
             }
 

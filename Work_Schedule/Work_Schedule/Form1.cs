@@ -46,7 +46,7 @@ namespace Work_Schedule
             timeControl1.BringToFront();
             SubTitle.Text = " 時間表";
             scheduleControl1.objtostring();    //reset stringarray to show the value in schedulecontrol
-            timeControl1.timeaxis(scheduleControl1.stringarray);   //throw the array value in schedulecontrol to timecontrol by public method 
+            timeControl1.timeaxis(scheduleControl1.axisarray);   //throw the array value in schedulecontrol to timecontrol by public method 
         }
 
         private void SalaryButton_Click(object sender, EventArgs e)
