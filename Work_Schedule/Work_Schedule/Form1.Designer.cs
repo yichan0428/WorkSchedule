@@ -103,7 +103,7 @@
             this.MadeTime.Name = "MadeTime";
             this.MadeTime.Size = new System.Drawing.Size(70, 13);
             this.MadeTime.TabIndex = 3;
-            this.MadeTime.Text = "ver.1.1.1";
+            this.MadeTime.Text = "ver.1.2.1";
             // 
             // Title
             // 

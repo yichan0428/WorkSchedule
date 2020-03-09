@@ -191,7 +191,9 @@ namespace Work_Schedule
             //
             UpSchedule.Rows.Add(12);
             DownSchedule.Rows.Add(12);
-          
+            SetTimes();
+            YearComboBox.SelectedIndex = 1;
+            MonthComboBox.SelectedIndex = 2;
 
             //
             //disable sort in every columns
@@ -230,5 +232,76 @@ namespace Work_Schedule
                 MessageBox.Show("請先儲存第一筆資料再進行載入");
             }
         }
+
+        private void YearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetTimes();
+        }
+
+        private void MonthComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetTimes();
+        }
+
+        private void SetTimes()
+        {
+            SetTimesDetail(YearComboBox, MonthComboBox, day1, 1);
+            SetTimesDetail(YearComboBox, MonthComboBox, day2, 2);
+            SetTimesDetail(YearComboBox, MonthComboBox, day3, 3);
+            SetTimesDetail(YearComboBox, MonthComboBox, day4, 4);
+            SetTimesDetail(YearComboBox, MonthComboBox, day5, 5);
+            SetTimesDetail(YearComboBox, MonthComboBox, day6, 6);
+            SetTimesDetail(YearComboBox, MonthComboBox, day7, 7);
+            SetTimesDetail(YearComboBox, MonthComboBox, day8, 8);
+            SetTimesDetail(YearComboBox, MonthComboBox, day9, 9);
+            SetTimesDetail(YearComboBox, MonthComboBox, day10, 10);
+            SetTimesDetail(YearComboBox, MonthComboBox, day11, 11);
+            SetTimesDetail(YearComboBox, MonthComboBox, day12, 12);
+            SetTimesDetail(YearComboBox, MonthComboBox, day13, 13);
+            SetTimesDetail(YearComboBox, MonthComboBox, day14, 14);
+            SetTimesDetail(YearComboBox, MonthComboBox, day15, 15);
+            SetTimesDetail(YearComboBox, MonthComboBox, day16, 16);
+            SetTimesDetail(YearComboBox, MonthComboBox, day17, 17);
+            SetTimesDetail(YearComboBox, MonthComboBox, day18, 18);
+            SetTimesDetail(YearComboBox, MonthComboBox, day19, 19);
+            SetTimesDetail(YearComboBox, MonthComboBox, day20, 20);
+            SetTimesDetail(YearComboBox, MonthComboBox, day21, 21);
+            SetTimesDetail(YearComboBox, MonthComboBox, day22, 22);
+            SetTimesDetail(YearComboBox, MonthComboBox, day23, 23);
+            SetTimesDetail(YearComboBox, MonthComboBox, day24, 24);
+            SetTimesDetail(YearComboBox, MonthComboBox, day25, 25);
+            SetTimesDetail(YearComboBox, MonthComboBox, day26, 26);
+            SetTimesDetail(YearComboBox, MonthComboBox, day27, 27);
+            SetTimesDetail(YearComboBox, MonthComboBox, day28, 28);
+            SetTimesDetail(YearComboBox, MonthComboBox, day29, 29);
+            SetTimesDetail(YearComboBox, MonthComboBox, day30, 30);
+            SetTimesDetail(YearComboBox, MonthComboBox, day31, 31);
+        }
+
+        private void SetTimesDetail(ComboBox year, ComboBox month, DataGridViewTextBoxColumn day ,int i)
+        {
+            try
+            {               
+                DateTime datavalue = new DateTime(year.SelectedIndex + 2019, month.SelectedIndex + 1, i);
+                string weekshow = "";
+                switch (datavalue.DayOfWeek.ToString())
+                {
+                    case "Monday": weekshow = "一"; break;
+                    case "Tuesday": weekshow = "二"; break;
+                    case "Wednesday": weekshow = "三"; break;
+                    case "Thursday": weekshow = "四"; break;
+                    case "Friday": weekshow = "五"; break;
+                    case "Saturday": weekshow = "六"; break;
+                    case "Sunday": weekshow = "日"; break;
+                }
+                day.HeaderText = i + " " +weekshow;                   
+            }
+            catch
+            {
+                day.HeaderText = "";
+            }
+
+        }
     }
+        
 }

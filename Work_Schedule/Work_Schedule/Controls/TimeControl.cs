@@ -211,14 +211,15 @@ namespace Work_Schedule
                 timeAxis1.GenerateTotalBar(stringarray, 0, comboBox1.SelectedIndex * 4 + 2);
                 timeAxis2.GenerateTotalBar(stringarray, 0, comboBox1.SelectedIndex * 4 + 3);
                 timeAxis3.GenerateTotalBar(stringarray, 0, comboBox1.SelectedIndex * 4 + 4);
-                timeAxis4.GenerateTotalBar(stringarray, 0, comboBox1.SelectedIndex * 4 + 4);
+                timeAxis4.GenerateTotalBar(stringarray, 0, comboBox1.SelectedIndex * 4 + 5);
             }
             else
             {
                 timeAxis1.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 2);
                 timeAxis2.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 3);
                 timeAxis3.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 4);
-                timeAxis4.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 4);
+                if(comboBox1.SelectedIndex != 7)
+                timeAxis4.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 5);
             }
             if (comboBox1.SelectedIndex  == 3) //Right and down timeaxis is  downschedule when 16day and do not show anything in 32day
                 timeAxis4.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 5);
