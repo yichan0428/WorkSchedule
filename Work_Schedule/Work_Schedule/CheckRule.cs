@@ -116,6 +116,33 @@ namespace Work_Schedule
             TotalStr += str;
             return str;
         }
+        // 
+        //version : check weekly48 in any consecutive 7 days
+        //
+        //public string weekly48(string[,] s)
+        //{
+        //    string str = "";
+        //    for (int i = 0; i < 24; i++)
+        //    {
+        //        for (int j = 2; j < 27; j++)
+        //        {
+        //            double count48 = 0;
+        //            for (int k = 0; k < 7; k++)
+        //                if (s[i, 0] != "" && s[i, j + k] != "" && CauculateTimes(s[i, j + k]) > 0)
+        //                {
+        //                    count48 += CauculateTimes(s[i, j + k]);
+        //                }
+        //            if (count48 > 48)
+        //            {
+        //                string stradd = s[i, 0] + " 的第 " + (j - 1) + " 天~第 " + (j + 5) + " 天已超過48小時\n";
+        //                str += stradd;
+        //            }
+
+        //        }
+        //    }
+        //    TotalStr += str;
+        //    return str;
+        //}
 
         private string TotalStr;
         

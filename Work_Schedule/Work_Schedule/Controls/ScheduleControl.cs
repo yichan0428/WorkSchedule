@@ -18,6 +18,10 @@ namespace Work_Schedule
         public string[,] stringarray = new string[24, 33];
         public string[,] axisarray = new string[24, 33];
         public string longstring = "";
+        private bool comboboxcount = false;
+        private bool Issave = false;
+        private int comboboxyearpreviosvalue = 0;
+        private int comboboxmonthpreviosvalue = 2;
         //
         //
         //    
@@ -39,16 +43,25 @@ namespace Work_Schedule
         private void SaveButton_Click(object sender, EventArgs e)
         {
             objtostring();
-            Properties.Settings.Default.Test = longstring;          
+
+            if (Issave == true)
+            {
+                storestring(comboboxyearpreviosvalue + 20, comboboxmonthpreviosvalue + 1);
+                comboboxyearpreviosvalue = YearComboBox.SelectedIndex;    //due to save data when selectedIndex_Changed
+                comboboxmonthpreviosvalue = MonthComboBox.SelectedIndex;
+                Issave = false;
+            }
+                
+            else
+            {
+                storestring(YearComboBox.SelectedIndex + 20, MonthComboBox.SelectedIndex + 1);                
+            }
+                
+                
             Properties.Settings.Default.Save();
             Properties.Settings.Default.Reload();
 
         }
-        private void Open_Click(object sender, EventArgs e)
-        {
-            load();
-        }
-
         public void objtostring()
         {
             // get datagridview data in a 2d array
@@ -191,9 +204,13 @@ namespace Work_Schedule
             //
             UpSchedule.Rows.Add(12);
             DownSchedule.Rows.Add(12);
-            SetTimes();
-            YearComboBox.SelectedIndex = 1;
+            
+            YearComboBox.SelectedIndex = 0;
             MonthComboBox.SelectedIndex = 2;
+            SetTimes();
+            comboboxcount = true;
+            load();
+        
 
             //
             //disable sort in every columns
@@ -209,9 +226,10 @@ namespace Work_Schedule
         }
         public void load()
         {
-            try 
+            string str = loadstring(YearComboBox.SelectedIndex+20, MonthComboBox.SelectedIndex+1);
+            try
             {
-                string[] SaveArray = (Properties.Settings.Default.Test).Split(new char[1] { '@' });
+                string[] SaveArray = str.Split(new char[1] { '@' });
                 for (int i = 0; i < 12; i++)
                 {
                     for (int j = 0; j < 17; j++)
@@ -227,22 +245,38 @@ namespace Work_Schedule
                     }
                 }
             }
-            catch 
+            catch
             {
-                MessageBox.Show("請先儲存第一筆資料再進行載入");
-            }
+
+            }    
+
+
         }
 
         private void YearComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SetTimes();
+            if (comboboxcount == true)
+            {
+                    Issave = true;
+                    SaveButton.PerformClick();
+                    load();
+                SetTimes();
+            }
+            
         }
 
         private void MonthComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SetTimes();
-        }
+            if (comboboxcount == true)
+            {
+                Issave = true;
+                SaveButton.PerformClick();
+                load();
+                SetTimes();
+                
 
+            }
+        }
         private void SetTimes()
         {
             SetTimesDetail(YearComboBox, MonthComboBox, day1, 1);
@@ -302,6 +336,114 @@ namespace Work_Schedule
             }
 
         }
+        private void storestring(int y , int m)
+        {
+            switch(y*100+m)
+            {
+                case 2001: Properties.Settings.Default.Store2001 = longstring; break;
+                case 2002: Properties.Settings.Default.Store2002 = longstring; break;
+                case 2003: Properties.Settings.Default.Store2003 = longstring; break;
+                case 2004: Properties.Settings.Default.Store2004 = longstring; break;
+                case 2005: Properties.Settings.Default.Store2005 = longstring; break;
+                case 2006: Properties.Settings.Default.Store2006 = longstring; break;
+                case 2007: Properties.Settings.Default.Store2007 = longstring; break;
+                case 2008: Properties.Settings.Default.Store2008 = longstring; break;
+                case 2009: Properties.Settings.Default.Store2009 = longstring; break;
+                case 2010: Properties.Settings.Default.Store2010 = longstring; break;
+                case 2011: Properties.Settings.Default.Store2011 = longstring; break;
+                case 2012: Properties.Settings.Default.Store2012 = longstring; break;
+                case 2101: Properties.Settings.Default.Store2101 = longstring; break;
+                case 2102: Properties.Settings.Default.Store2102 = longstring; break;
+                case 2103: Properties.Settings.Default.Store2103 = longstring; break;
+                case 2104: Properties.Settings.Default.Store2104 = longstring; break;
+                case 2105: Properties.Settings.Default.Store2105 = longstring; break;
+                case 2106: Properties.Settings.Default.Store2106 = longstring; break;
+                case 2107: Properties.Settings.Default.Store2107 = longstring; break;
+                case 2108: Properties.Settings.Default.Store2108 = longstring; break;
+                case 2109: Properties.Settings.Default.Store2109 = longstring; break;
+                case 2110: Properties.Settings.Default.Store2110 = longstring; break;
+                case 2111: Properties.Settings.Default.Store2111 = longstring; break;
+                case 2112: Properties.Settings.Default.Store2112 = longstring; break;
+                case 2201: Properties.Settings.Default.Store2201 = longstring; break;
+                case 2202: Properties.Settings.Default.Store2202 = longstring; break;
+                case 2203: Properties.Settings.Default.Store2203 = longstring; break;
+                case 2204: Properties.Settings.Default.Store2204 = longstring; break;
+                case 2205: Properties.Settings.Default.Store2205 = longstring; break;
+                case 2206: Properties.Settings.Default.Store2206 = longstring; break;
+                case 2207: Properties.Settings.Default.Store2207 = longstring; break;
+                case 2208: Properties.Settings.Default.Store2208 = longstring; break;
+                case 2209: Properties.Settings.Default.Store2209 = longstring; break;
+                case 2210: Properties.Settings.Default.Store2210 = longstring; break;
+                case 2211: Properties.Settings.Default.Store2211 = longstring; break;
+                case 2212: Properties.Settings.Default.Store2212 = longstring; break;
+                
+            }
+
+        }
+        private string loadstring(int y, int m)
+        {
+            string str = "";
+            switch (y * 100 + m)
+            {
+
+                case 2001: str = Properties.Settings.Default.Store2001; break;
+                case 2002: str = Properties.Settings.Default.Store2002; break;
+                case 2003: str = Properties.Settings.Default.Store2003; break;
+                case 2004: str = Properties.Settings.Default.Store2004; break;
+                case 2005: str = Properties.Settings.Default.Store2005; break;
+                case 2006: str = Properties.Settings.Default.Store2006; break;
+                case 2007: str = Properties.Settings.Default.Store2007; break;
+                case 2008: str = Properties.Settings.Default.Store2008; break;
+                case 2009: str = Properties.Settings.Default.Store2009; break;
+                case 2010: str = Properties.Settings.Default.Store2010; break;
+                case 2011: str = Properties.Settings.Default.Store2011; break;
+                case 2012: str = Properties.Settings.Default.Store2012; break;
+                case 2101: str = Properties.Settings.Default.Store2101; break;
+                case 2102: str = Properties.Settings.Default.Store2102; break;
+                case 2103: str = Properties.Settings.Default.Store2103; break;
+                case 2104: str = Properties.Settings.Default.Store2104; break;
+                case 2105: str = Properties.Settings.Default.Store2105; break;
+                case 2106: str = Properties.Settings.Default.Store2106; break;
+                case 2107: str = Properties.Settings.Default.Store2107; break;
+                case 2108: str = Properties.Settings.Default.Store2108; break;
+                case 2109: str = Properties.Settings.Default.Store2109; break;
+                case 2110: str = Properties.Settings.Default.Store2110; break;
+                case 2111: str = Properties.Settings.Default.Store2111; break;
+                case 2112: str = Properties.Settings.Default.Store2112; break;
+                case 2201: str = Properties.Settings.Default.Store2201; break;
+                case 2202: str = Properties.Settings.Default.Store2202; break;
+                case 2203: str = Properties.Settings.Default.Store2203; break;
+                case 2204: str = Properties.Settings.Default.Store2204; break;
+                case 2205: str = Properties.Settings.Default.Store2205; break;
+                case 2206: str = Properties.Settings.Default.Store2206; break;
+                case 2207: str = Properties.Settings.Default.Store2207; break;
+                case 2208: str = Properties.Settings.Default.Store2208; break;
+                case 2209: str = Properties.Settings.Default.Store2209; break;
+                case 2210: str = Properties.Settings.Default.Store2210; break;
+                case 2211: str = Properties.Settings.Default.Store2211; break;
+                case 2212: str = Properties.Settings.Default.Store2212; break;
+                default: str = "";break;
+            }
+
+            return str;
+        }
+        private void initialize()
+        {
+            for (int i = 0; i < 12; i++)
+            {
+                for (int j = 0; j < 17; j++)
+                {
+                    UpSchedule.Rows[i].Cells[j].Value = "";
+                }
+            }
+            for (int i = 0; i < 12; i++)
+            {
+                for (int j = 0; j < 18; j++)
+                {
+                    DownSchedule.Rows[i].Cells[j].Value = "";
+                }
+            }
+        }
     }
-        
+
 }
