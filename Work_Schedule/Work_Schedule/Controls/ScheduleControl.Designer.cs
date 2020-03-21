@@ -36,6 +36,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.UpSchedule = new System.Windows.Forms.DataGridView();
+            this.CheckButton = new System.Windows.Forms.Button();
+            this.DownSchedule = new System.Windows.Forms.DataGridView();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.YearComboBox = new System.Windows.Forms.ComboBox();
+            this.MonthComboBox = new System.Windows.Forms.ComboBox();
             this.UpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpTitle = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.day1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,8 +58,6 @@
             this.day13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.day14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.day15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CheckButton = new System.Windows.Forms.Button();
-            this.DownSchedule = new System.Windows.Forms.DataGridView();
             this.DownName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DownTitle = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.day16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,10 +76,6 @@
             this.day29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.day30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.day31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaveButton = new System.Windows.Forms.Button();
-            this.YearComboBox = new System.Windows.Forms.ComboBox();
-            this.MonthComboBox = new System.Windows.Forms.ComboBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.UpSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DownSchedule)).BeginInit();
             this.SuspendLayout();
@@ -153,9 +152,140 @@
             this.UpSchedule.Name = "UpSchedule";
             this.UpSchedule.RowHeadersVisible = false;
             this.UpSchedule.RowTemplate.Height = 24;
+            this.UpSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.UpSchedule.ShowCellToolTips = false;
             this.UpSchedule.Size = new System.Drawing.Size(967, 310);
             this.UpSchedule.TabIndex = 1289;
+            // 
+            // CheckButton
+            // 
+            this.CheckButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.CheckButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.CheckButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(11)))));
+            this.CheckButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckButton.Font = new System.Drawing.Font("DFKai-SB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.CheckButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CheckButton.Image = ((System.Drawing.Image)(resources.GetObject("CheckButton.Image")));
+            this.CheckButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CheckButton.Location = new System.Drawing.Point(810, 8);
+            this.CheckButton.Name = "CheckButton";
+            this.CheckButton.Size = new System.Drawing.Size(130, 46);
+            this.CheckButton.TabIndex = 1290;
+            this.CheckButton.Text = "勞健保檢查";
+            this.CheckButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CheckButton.UseVisualStyleBackColor = false;
+            this.CheckButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // DownSchedule
+            // 
+            this.DownSchedule.AllowUserToAddRows = false;
+            this.DownSchedule.AllowUserToDeleteRows = false;
+            this.DownSchedule.AllowUserToResizeColumns = false;
+            this.DownSchedule.AllowUserToResizeRows = false;
+            this.DownSchedule.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.DownSchedule.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DownSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DownSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DownSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DownName,
+            this.DownTitle,
+            this.day16,
+            this.day17,
+            this.day18,
+            this.day19,
+            this.day20,
+            this.day21,
+            this.day22,
+            this.day23,
+            this.day24,
+            this.day25,
+            this.day26,
+            this.day27,
+            this.day28,
+            this.day29,
+            this.day30,
+            this.day31});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DownSchedule.DefaultCellStyle = dataGridViewCellStyle4;
+            this.DownSchedule.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.DownSchedule.Location = new System.Drawing.Point(35, 411);
+            this.DownSchedule.Name = "DownSchedule";
+            this.DownSchedule.RowHeadersVisible = false;
+            this.DownSchedule.RowTemplate.Height = 24;
+            this.DownSchedule.ShowCellToolTips = false;
+            this.DownSchedule.Size = new System.Drawing.Size(1024, 310);
+            this.DownSchedule.TabIndex = 1289;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.SaveButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.SaveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(11)))));
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("DFKai-SB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SaveButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
+            this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SaveButton.Location = new System.Drawing.Point(955, 8);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(92, 46);
+            this.SaveButton.TabIndex = 1290;
+            this.SaveButton.Text = " 儲存";
+            this.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // YearComboBox
+            // 
+            this.YearComboBox.Font = new System.Drawing.Font("DFKai-SB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.YearComboBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.YearComboBox.FormattingEnabled = true;
+            this.YearComboBox.Items.AddRange(new object[] {
+            " 2020年  ",
+            " 2021年",
+            " 2022年"});
+            this.YearComboBox.Location = new System.Drawing.Point(104, 25);
+            this.YearComboBox.Name = "YearComboBox";
+            this.YearComboBox.Size = new System.Drawing.Size(80, 24);
+            this.YearComboBox.TabIndex = 1291;
+            this.YearComboBox.SelectedIndexChanged += new System.EventHandler(this.YearComboBox_SelectedIndexChanged);
+            // 
+            // MonthComboBox
+            // 
+            this.MonthComboBox.Font = new System.Drawing.Font("DFKai-SB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.MonthComboBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.MonthComboBox.FormattingEnabled = true;
+            this.MonthComboBox.Items.AddRange(new object[] {
+            " 1月",
+            " 2月",
+            " 3月",
+            " 4月",
+            " 5月",
+            " 6月",
+            " 7月",
+            " 8月",
+            " 9月",
+            " 10月",
+            " 11月",
+            " 12月"});
+            this.MonthComboBox.Location = new System.Drawing.Point(199, 25);
+            this.MonthComboBox.Name = "MonthComboBox";
+            this.MonthComboBox.Size = new System.Drawing.Size(62, 24);
+            this.MonthComboBox.TabIndex = 1291;
+            this.MonthComboBox.SelectedIndexChanged += new System.EventHandler(this.MonthComboBox_SelectedIndexChanged);
             // 
             // UpName
             // 
@@ -177,7 +307,7 @@
             "副店長",
             "店長"});
             this.UpTitle.Name = "UpTitle";
-            this.UpTitle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.UpTitle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.UpTitle.Width = 75;
             // 
             // day1
@@ -270,78 +400,6 @@
             this.day15.Name = "day15";
             this.day15.Width = 55;
             // 
-            // CheckButton
-            // 
-            this.CheckButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.CheckButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.CheckButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(11)))));
-            this.CheckButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheckButton.Font = new System.Drawing.Font("DFKai-SB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.CheckButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CheckButton.Image = ((System.Drawing.Image)(resources.GetObject("CheckButton.Image")));
-            this.CheckButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CheckButton.Location = new System.Drawing.Point(810, 8);
-            this.CheckButton.Name = "CheckButton";
-            this.CheckButton.Size = new System.Drawing.Size(130, 46);
-            this.CheckButton.TabIndex = 1290;
-            this.CheckButton.Text = "勞健保檢查";
-            this.CheckButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CheckButton.UseVisualStyleBackColor = false;
-            this.CheckButton.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // DownSchedule
-            // 
-            this.DownSchedule.AllowUserToAddRows = false;
-            this.DownSchedule.AllowUserToDeleteRows = false;
-            this.DownSchedule.AllowUserToResizeColumns = false;
-            this.DownSchedule.AllowUserToResizeRows = false;
-            this.DownSchedule.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.DownSchedule.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DownSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DownSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DownSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DownName,
-            this.DownTitle,
-            this.day16,
-            this.day17,
-            this.day18,
-            this.day19,
-            this.day20,
-            this.day21,
-            this.day22,
-            this.day23,
-            this.day24,
-            this.day25,
-            this.day26,
-            this.day27,
-            this.day28,
-            this.day29,
-            this.day30,
-            this.day31});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DownSchedule.DefaultCellStyle = dataGridViewCellStyle4;
-            this.DownSchedule.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.DownSchedule.Location = new System.Drawing.Point(35, 411);
-            this.DownSchedule.Name = "DownSchedule";
-            this.DownSchedule.RowHeadersVisible = false;
-            this.DownSchedule.RowTemplate.Height = 24;
-            this.DownSchedule.ShowCellToolTips = false;
-            this.DownSchedule.Size = new System.Drawing.Size(1024, 310);
-            this.DownSchedule.TabIndex = 1289;
-            // 
             // DownName
             // 
             this.DownName.HeaderText = "姓名";
@@ -362,7 +420,7 @@
             "副店長",
             "店長"});
             this.DownTitle.Name = "DownTitle";
-            this.DownTitle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DownTitle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.DownTitle.Width = 75;
             // 
             // day16
@@ -462,64 +520,6 @@
             this.day31.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.day31.Width = 55;
             // 
-            // SaveButton
-            // 
-            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.SaveButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.SaveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(11)))));
-            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Font = new System.Drawing.Font("DFKai-SB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.SaveButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
-            this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SaveButton.Location = new System.Drawing.Point(955, 8);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(92, 46);
-            this.SaveButton.TabIndex = 1290;
-            this.SaveButton.Text = " 儲存";
-            this.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SaveButton.UseVisualStyleBackColor = false;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // YearComboBox
-            // 
-            this.YearComboBox.Font = new System.Drawing.Font("DFKai-SB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.YearComboBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.YearComboBox.FormattingEnabled = true;
-            this.YearComboBox.Items.AddRange(new object[] {
-            " 2020年  ",
-            " 2021年",
-            " 2022年"});
-            this.YearComboBox.Location = new System.Drawing.Point(104, 25);
-            this.YearComboBox.Name = "YearComboBox";
-            this.YearComboBox.Size = new System.Drawing.Size(80, 24);
-            this.YearComboBox.TabIndex = 1291;
-            this.YearComboBox.SelectedIndexChanged += new System.EventHandler(this.YearComboBox_SelectedIndexChanged);
-            // 
-            // MonthComboBox
-            // 
-            this.MonthComboBox.Font = new System.Drawing.Font("DFKai-SB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.MonthComboBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.MonthComboBox.FormattingEnabled = true;
-            this.MonthComboBox.Items.AddRange(new object[] {
-            " 1月",
-            " 2月",
-            " 3月",
-            " 4月",
-            " 5月",
-            " 6月",
-            " 7月",
-            " 8月",
-            " 9月",
-            " 10月",
-            " 11月",
-            " 12月"});
-            this.MonthComboBox.Location = new System.Drawing.Point(199, 25);
-            this.MonthComboBox.Name = "MonthComboBox";
-            this.MonthComboBox.Size = new System.Drawing.Size(62, 24);
-            this.MonthComboBox.TabIndex = 1291;
-            this.MonthComboBox.SelectedIndexChanged += new System.EventHandler(this.MonthComboBox_SelectedIndexChanged);
-            // 
             // ScheduleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -551,6 +551,8 @@
         public System.Windows.Forms.DataGridView UpSchedule;
         public System.Windows.Forms.DataGridView DownSchedule;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.ComboBox YearComboBox;
+        private System.Windows.Forms.ComboBox MonthComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn UpName;
         private System.Windows.Forms.DataGridViewComboBoxColumn UpTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn day1;
@@ -586,8 +588,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn day29;
         private System.Windows.Forms.DataGridViewTextBoxColumn day30;
         private System.Windows.Forms.DataGridViewTextBoxColumn day31;
-        private System.Windows.Forms.ComboBox YearComboBox;
-        private System.Windows.Forms.ComboBox MonthComboBox;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
