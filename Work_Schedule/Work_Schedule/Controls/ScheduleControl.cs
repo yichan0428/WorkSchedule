@@ -14,7 +14,8 @@ namespace Work_Schedule
     {
         /*If you want to call any value in schedulecontrol, 
           you need to declare a public item to get value inderectly*/
-        public bool daily10, weekly7, weekly48;               
+        public bool daily10, weekly7, weekly48;
+        public string[,] crossarray = new string[24, 45];
         public string[,] stringarray = new string[24, 33];
         public string[,] axisarray = new string[24, 33];
         public string longstring = "";
@@ -22,6 +23,10 @@ namespace Work_Schedule
         private bool Issave = false;
         private int comboboxyearpreviosvalue = 0;
         private int comboboxmonthpreviosvalue = 2;
+        private int day1value;
+        private int day31value;
+
+        string[] SaveArray2;
         //
         //
         //    
@@ -37,7 +42,7 @@ namespace Work_Schedule
         {
             objtostring();
             CheckRule checkrule = new CheckRule();
-            MessageBox.Show(checkrule.TotalCheck(stringarray, daily10, weekly7, weekly48));
+            MessageBox.Show(checkrule.TotalCheck(crossarray, daily10, weekly7, weekly48,day1value, day31value, getpreviosbound(),getthisbound()));
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -194,6 +199,72 @@ namespace Work_Schedule
 
                 }
             }
+            //
+            //getacrossarray  (seperate stringarray)      acrossarray is 2(name title)+6(prevoius month)+15(upschedule)+16(downschedule)+6(next month)
+            //
+            for (int i = 0; i < 24; i++)
+            {
+                crossarray[i, 0] = stringarray[i, 0];
+                crossarray[i, 1] = stringarray[i, 1];
+                for (int j = 2; j < 33; j++)
+                {
+                    crossarray[i, j + 6] = stringarray[i, j];
+                }
+            }
+            //First :get the last 6 days in previous month and throw into crossarray
+            string[] SaveArray;
+            string previousstr;
+            if (MonthComboBox.SelectedIndex == 0)
+                previousstr = loadstring(YearComboBox.SelectedIndex + 19, 12);
+            else
+                previousstr = loadstring(YearComboBox.SelectedIndex + 20, MonthComboBox.SelectedIndex);
+            try
+            {
+                SaveArray = previousstr.Split(new char[1] { '@' });
+                for (int j = 204; j < 403; j += 18)
+                {
+                    for (int i = 0; i < 12; i++)
+                    {
+                        if (SaveArray[j] != "" && SaveArray[j] == crossarray[i, 0])
+                        {
+                            for (int a = 0; a < 6; a++)
+                            {
+                                crossarray[i, a + 2] = SaveArray[j + (getpreviosbound() - 14 - 5) + a];
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch{}
+            //Second :get the first 6 days in next month and throw into crossarray
+            
+            string nextstr;
+            if (MonthComboBox.SelectedIndex == 12)
+                nextstr = loadstring(YearComboBox.SelectedIndex + 21, 1);
+            else
+                nextstr = loadstring(YearComboBox.SelectedIndex + 20, MonthComboBox.SelectedIndex+2);
+            try
+            {
+                SaveArray2 = nextstr.Split(new char[1] { '@' });
+
+                for (int j = 0; j < 188; j += 17)
+                {
+                    for (int i = 0; i < 24; i++)
+                    {
+                        if (SaveArray2[j] != "" && SaveArray2[j] == crossarray[i, 0])
+                        {
+                            for (int a = 0; a < (6 + 31 - getthisbound()); a++)
+                            {
+                                crossarray[i, a + getthisbound() + 8] = SaveArray2[j + a + 2];
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch {}
+            
 
         }
 
@@ -247,7 +318,7 @@ namespace Work_Schedule
             }
             catch
             {
-
+                initialize();
             }    
 
 
@@ -257,12 +328,11 @@ namespace Work_Schedule
         {
             if (comboboxcount == true)
             {
-                    Issave = true;
-                    SaveButton.PerformClick();
-                    load();
+                Issave = true;
+                SaveButton.PerformClick();
+                load();
                 SetTimes();
-            }
-            
+            }         
         }
 
         private void MonthComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -273,8 +343,6 @@ namespace Work_Schedule
                 SaveButton.PerformClick();
                 load();
                 SetTimes();
-                
-
             }
         }
         private void SetTimes()
@@ -316,18 +384,42 @@ namespace Work_Schedule
         {
             try
             {               
-                DateTime datavalue = new DateTime(year.SelectedIndex + 2019, month.SelectedIndex + 1, i);
+                DateTime datavalue = new DateTime(year.SelectedIndex + 2020, month.SelectedIndex + 1, i);
                 string weekshow = "";
                 switch (datavalue.DayOfWeek.ToString())
                 {
-                    case "Monday": weekshow = "一"; break;
-                    case "Tuesday": weekshow = "二"; break;
-                    case "Wednesday": weekshow = "三"; break;
-                    case "Thursday": weekshow = "四"; break;
-                    case "Friday": weekshow = "五"; break;
-                    case "Saturday": weekshow = "六"; break;
-                    case "Sunday": weekshow = "日"; break;
+                    case "Monday"   : weekshow = "一";  break;
+                    case "Tuesday"  : weekshow = "二";  break;
+                    case "Wednesday": weekshow = "三";  break;
+                    case "Thursday" : weekshow = "四";  break;
+                    case "Friday"   : weekshow = "五";  break;
+                    case "Saturday" : weekshow = "六";  break;
+                    case "Sunday"   : weekshow = "日";  break;
                 }
+                //get day1 and day31 value to checkrule
+                DateTime datavalue2 = new DateTime(year.SelectedIndex + 2020, month.SelectedIndex + 1, 1);
+                DateTime datavalue3 = new DateTime(year.SelectedIndex + 2020, month.SelectedIndex + 1, 1);
+                switch (datavalue2.DayOfWeek.ToString())
+                {
+                    case "Monday":  day1value = 1; break;
+                    case "Tuesday":  day1value = 2; break;
+                    case "Wednesday":  day1value = 3; break;
+                    case "Thursday":  day1value = 4; break;
+                    case "Friday":  day1value = 5; break;
+                    case "Saturday":  day1value = 6; break;
+                    case "Sunday":  day1value = 7; break;
+                }
+                switch (datavalue3.DayOfWeek.ToString())
+                {
+                    case "Monday": day31value = 1; break;
+                    case "Tuesday": day31value = 2; break;
+                    case "Wednesday": day31value = 3; break;
+                    case "Thursday": day31value = 4; break;
+                    case "Friday": day31value = 5; break;
+                    case "Saturday": day31value = 6; break;
+                    case "Sunday": day31value = 7; break;
+                }
+
                 day.HeaderText = i + " " +weekshow;                   
             }
             catch
@@ -427,6 +519,7 @@ namespace Work_Schedule
 
             return str;
         }
+
         private void initialize()
         {
             for (int i = 0; i < 12; i++)
@@ -443,6 +536,64 @@ namespace Work_Schedule
                     DownSchedule.Rows[i].Cells[j].Value = "";
                 }
             }
+        }
+        private int getpreviosbound()
+        {
+            //
+            // get previous month bounded day
+            //
+            int PreviousMonthBound = 31;
+            for (int i = 31; i > 28; i--)
+            {
+                try
+                {
+                    if (MonthComboBox.SelectedIndex == 0)
+                    {
+                        DateTime datavalue = new DateTime(YearComboBox.SelectedIndex + 2019, 12, i);
+                        datavalue.DayOfWeek.ToString();
+                    }
+
+                    else
+                    {
+                        DateTime datavalue = new DateTime(YearComboBox.SelectedIndex + 2020, MonthComboBox.SelectedIndex, i);
+                        datavalue.DayOfWeek.ToString();
+                    }
+                }
+                catch
+                {
+                    PreviousMonthBound = i - 1;
+                }
+            }
+            return PreviousMonthBound;
+        }
+        private int getthisbound()
+        {
+            //
+            // get previous month bounded day
+            //
+            int thisMonthBound = 31;
+            for (int i = 31; i > 28; i--)
+            {
+                try
+                {
+                    if (MonthComboBox.SelectedIndex == 12)
+                    {
+                        DateTime datavalue = new DateTime(YearComboBox.SelectedIndex + 2021, 1, i);
+                        datavalue.DayOfWeek.ToString();
+                    }
+
+                    else
+                    {
+                        DateTime datavalue = new DateTime(YearComboBox.SelectedIndex + 2020, MonthComboBox.SelectedIndex + 1, i);
+                        datavalue.DayOfWeek.ToString();
+                    }
+                }
+                catch
+                {
+                    thisMonthBound = i - 1;
+                }
+            }
+            return thisMonthBound;
         }
     }
 

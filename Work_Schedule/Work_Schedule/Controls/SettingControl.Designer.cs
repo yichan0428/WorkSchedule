@@ -39,13 +39,13 @@
             this.weekly7CheckBox.AutoSize = true;
             this.weekly7CheckBox.Checked = true;
             this.weekly7CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.weekly7CheckBox.Font = new System.Drawing.Font("標楷體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.weekly7CheckBox.Font = new System.Drawing.Font("DFKai-SB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.weekly7CheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.weekly7CheckBox.Location = new System.Drawing.Point(344, 421);
             this.weekly7CheckBox.Name = "weekly7CheckBox";
             this.weekly7CheckBox.Size = new System.Drawing.Size(233, 28);
             this.weekly7CheckBox.TabIndex = 10;
-            this.weekly7CheckBox.Text = " 不得連續上班七天";
+            this.weekly7CheckBox.Text = " 不得連續上班七日";
             this.weekly7CheckBox.UseVisualStyleBackColor = true;
             // 
             // weekly48CheckBox
@@ -53,19 +53,19 @@
             this.weekly48CheckBox.AutoSize = true;
             this.weekly48CheckBox.Checked = true;
             this.weekly48CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.weekly48CheckBox.Font = new System.Drawing.Font("標楷體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.weekly48CheckBox.Font = new System.Drawing.Font("DFKai-SB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.weekly48CheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.weekly48CheckBox.Location = new System.Drawing.Point(344, 360);
             this.weekly48CheckBox.Name = "weekly48CheckBox";
-            this.weekly48CheckBox.Size = new System.Drawing.Size(365, 28);
+            this.weekly48CheckBox.Size = new System.Drawing.Size(413, 28);
             this.weekly48CheckBox.TabIndex = 11;
-            this.weekly48CheckBox.Text = " 一周(一~日)不得超過 48 小時";
+            this.weekly48CheckBox.Text = " 一周 (一 ~ 日) 不得超過 48 小時";
             this.weekly48CheckBox.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("標楷體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Font = new System.Drawing.Font("DFKai-SB", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(296, 216);
             this.label1.Name = "label1";
@@ -78,13 +78,13 @@
             this.daily10CheckBox.AutoSize = true;
             this.daily10CheckBox.Checked = true;
             this.daily10CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.daily10CheckBox.Font = new System.Drawing.Font("標楷體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.daily10CheckBox.Font = new System.Drawing.Font("DFKai-SB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.daily10CheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.daily10CheckBox.Location = new System.Drawing.Point(344, 301);
             this.daily10CheckBox.Name = "daily10CheckBox";
             this.daily10CheckBox.Size = new System.Drawing.Size(281, 28);
             this.daily10CheckBox.TabIndex = 11;
-            this.daily10CheckBox.Text = " 一天不得超過 10 小時";
+            this.daily10CheckBox.Text = " 一日不得超過 10 小時";
             this.daily10CheckBox.UseVisualStyleBackColor = true;
             // 
             // SettingControl
