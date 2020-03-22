@@ -64,7 +64,19 @@ namespace Work_Schedule
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("即將關閉，是否儲存?","提示",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                scheduleControl1.SaveButton.PerformClick();
+                Application.Exit();
+            }
+            else if (result == DialogResult.No)
+            {
+                Application.Exit();
+            }
+            else 
+            {
+            }
         }
 
         private void MinimumButton_Click(object sender, EventArgs e)
@@ -95,15 +107,15 @@ namespace Work_Schedule
 */
         private void QuationMarkButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("\t\t                        排班系統使用說明      \n\n"+
-                            "班表輸入時\n"+
+            MessageBox.Show("班表輸入時\n"+
                             "  1.可以使用12/24小時制排班，\n"+
                             "      ex：7 - 12 (5小時)  ,  7 - 7 (12小時)  ,  7 - 19 (12小時)\n" +
                             "     ★注意★\n" + 
                             "       7 - 8  判定為1小時而非13小時，如需排定13小時需輸入7 - 20\n" +
                             "       7 - 11 判定為早上，如需排定晚上須輸入 19 - 23\n\n" +
                             "  2.兩段班制請使用 \" / \" 來做區隔\n" +
-                            "      ex：7 - 1 / 5 - 9　(10小時)\n");
+                            "      ex：7 - 1 / 5 - 9　(10小時)\n"
+                            ,"排班系統使用說明",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }

@@ -92,6 +92,12 @@
     <Compile Include="TimeAxis.Designer.cs">
       <DependentUpon>TimeAxis.cs</DependentUpon>
     </Compile>
+    <Compile Include="TimeaxisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeaxisForm.Designer.cs">
+      <DependentUpon>TimeaxisForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TimeAxis.resx">
       <DependentUpon>TimeAxis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeaxisForm.resx">
+      <DependentUpon>TimeaxisForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

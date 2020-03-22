@@ -25,15 +25,15 @@ namespace Work_Schedule
         private int comboboxmonthpreviosvalue = 2;
         private int day1value;
         private int day31value;
-
         string[] SaveArray2;
+        TimeaxisForm TimeaxisForm;
         //
         //
         //    
         public ScheduleControl()
         {
             InitializeComponent();
-            
+            TimeaxisForm = new TimeaxisForm(stringarray);
         }
         //
         //
@@ -281,7 +281,6 @@ namespace Work_Schedule
             SetTimes();
             comboboxcount = true;
             load();
-        
 
             //
             //disable sort in every columns
@@ -537,6 +536,51 @@ namespace Work_Schedule
                 }
             }
         }
+
+        private void NextPageBtn_Click(object sender, EventArgs e)
+        {
+            if (YearComboBox.SelectedIndex != YearComboBox.Items.Count - 1 && MonthComboBox.SelectedIndex ==  MonthComboBox.Items.Count - 1)
+            {
+                YearComboBox.SelectedIndex++;
+                MonthComboBox.SelectedIndex = 0;
+            }
+            else if (YearComboBox.SelectedIndex == YearComboBox.Items.Count - 1 && MonthComboBox.SelectedIndex == MonthComboBox.Items.Count - 1)
+            {
+            }
+            else
+            {
+                MonthComboBox.SelectedIndex++;
+            }
+        }
+
+        private void PreviousPageBtn_Click(object sender, EventArgs e)
+        {
+            if (YearComboBox.SelectedIndex != 0 && MonthComboBox.SelectedIndex == 0)
+            {
+                YearComboBox.SelectedIndex--;
+                MonthComboBox.SelectedIndex = MonthComboBox.Items.Count - 1;
+            }
+            else if (YearComboBox.SelectedIndex == 0 && MonthComboBox.SelectedIndex == 0)
+            {
+            }
+            else
+            {
+                MonthComboBox.SelectedIndex--;
+            }
+        }
+
+        //private void TimeaxisBtn_Click(object sender, EventArgs e)
+        //{
+        //    TimeaxisForm.Show();
+        //    TimeaxisForm.TopMost = true;
+        //}
+
+        //private void UpSchedule_CellEnter(object sender, DataGridViewCellEventArgs e)
+        //{
+            
+        //    TimeaxisForm.resetstringarray(stringarray);
+        //}
+
         private int getpreviosbound()
         {
             //

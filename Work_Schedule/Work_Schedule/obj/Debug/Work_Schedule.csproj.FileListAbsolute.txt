@@ -43,3 +43,4 @@ C:\Users\chan\Desktop\WorkScheduleByC#\Work_Schedule\Work_Schedule\obj\Debug\Wor
 C:\Users\chan\Desktop\WorkScheduleByC#\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.exe
 C:\Users\chan\Desktop\WorkScheduleByC#\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.pdb
 C:\Users\chan\Desktop\WorkScheduleByC#\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.csprojResolveAssemblyReference.cache
+C:\Users\chan\Desktop\WorkScheduleByC#\Work_Schedule\Work_Schedule\obj\Debug\Work_Schedule.TimeaxisForm.resources

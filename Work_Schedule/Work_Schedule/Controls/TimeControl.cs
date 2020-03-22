@@ -225,7 +225,6 @@ namespace Work_Schedule
                 timeAxis4.GenerateTotalBar(stringarray, 1, comboBox1.SelectedIndex * 4 + 5);
             if (comboBox1.SelectedIndex == 7) //Right and down timeaxis is  downschedule when 16day and do not show anything in 32day
                 timeAxis4.GenerateTotalBar(nullarray, 1, comboBox1.SelectedIndex * 4 + 1);
-        } 
-
+        }
     }
 }
